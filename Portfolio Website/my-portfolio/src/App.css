@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  overflow: overlay;
+} 
+
+* { 
+  overflow: overlay;
 } 
 
 .App-header {
@@ -43,6 +48,8 @@ header {
   background-image: url('./images/PhotoMyrtleBeach.com-7.jpg');
   background-position: center, center;
   background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+
 }
 
 header div {
@@ -51,6 +58,26 @@ header div {
   border-radius: 5px;
   text-align: center;
   padding: 10px; 
+}   
+
+::-webkit-scrollbar {
+  width: 12px;   
 } 
 
- 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, rgb(0, 0, 0));
+  border-radius: 5px;
+}
+
+#unity {
+  background: linear-gradient(rgba(1, 1, 1, 0.247), transparent); 
+}
+
+#title {
+  text-align: center;
+  font-size: 50px;
+}

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-custom-scrollbars": "^4.2.1",
     "typewriter-effect": "^2.18.0"
   }
 }

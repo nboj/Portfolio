@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useState } from 'react'; 
+import React, { useEffect, useState } from 'react';  
  
 const date = new Date();
 let i = 0;  
@@ -12,7 +12,6 @@ function ForwardsLoop(word, text, setText) {
     ForwardsLoop(word, text, setText); 
     else {
       BackwardsLoop(word, text, setText);
-      
     }
   }, 100);
 } 
@@ -40,7 +39,7 @@ function App() {
     return () => clearInterval(interval);
   });
   return ( 
-    <div>
+    <div id='html'>
       <nav>
         <ul>
           <li><a>C#</a></li>
@@ -54,8 +53,19 @@ function App() {
           <h1>I'm Christian Auman!</h1>  
           <p>{date.getFullYear() - 2003 - (date.getMonth() < 8 ? 1 : 0)} years old, computer scientist{text}</p>
         </div>
-      </header> 
-         
+      </header>  
+      <div id='unity'>
+        <h1 id='title'>Unity</h1>
+        <section>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+        </section>
+      </div>
     </div>
   );
 }
