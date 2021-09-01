@@ -14,7 +14,7 @@
 }
 
 nav { 
-  background-color: #1e2127;  
+  background-color: #1e212798;  
   position: fixed;
   width: 100%;
 }
@@ -28,7 +28,7 @@ ul {
 } 
 
 li:hover {  
-  background-color: #282c34;
+  background-color: #282c34b4;
   cursor: pointer;
   transition:cubic-bezier(1, 0, 0, 1);
 }
