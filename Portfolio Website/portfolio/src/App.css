@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+} 
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+nav { 
+  background-color: #1e2127;  
+  position: fixed;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  overflow: auto;
+  clear: both;
+  margin: 0;
+  padding: 0;
+} 
+
+li:hover {  
+  background-color: #282c34;
+  cursor: pointer;
+  transition:cubic-bezier(1, 0, 0, 1);
+}
+
+li {
+  color: white;
+  float: right;
+  padding: 20px 10px;
+} 
