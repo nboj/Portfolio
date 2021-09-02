@@ -1,9 +1,9 @@
 import './App.css';
-import React, { useEffect, useState } from 'react'; 
+import React, { useEffect, useState } from 'react';  
  
-
+const date = new Date();
 let i = 0;  
-let a = 2200; 
+let a = 1100;  
 function ForwardsLoop(word, text, setText) {
   setTimeout(() => {  
     setText(word.substring(0, i));
@@ -12,7 +12,6 @@ function ForwardsLoop(word, text, setText) {
     ForwardsLoop(word, text, setText); 
     else {
       BackwardsLoop(word, text, setText);
-      
     }
   }, 100);
 } 
@@ -40,20 +39,33 @@ function App() {
     return () => clearInterval(interval);
   });
   return ( 
-    <div>
+    <div id='html'>
       <nav>
-        <ul>
+        <ul className='navOptions'>
           <li><a>C#</a></li>
           <li><a>Web</a></li>
-          <li><a>Unity</a></li>
+          <li><a href='#unity'>Unity</a></li>
           <li><a>Java</a></li>
         </ul>
       </nav>
       <header className='App-header'>
-        <h1>I'm Christian Auman!</h1>  
-        <p>18 years old, computer scientist{text}</p>
-      </header> 
-         
+        <div>
+          <h1>I'm Christian Auman!</h1>  
+          <p>{date.getFullYear() - 2003 - (date.getMonth() < 8 ? 1 : 0)} years old, computer scientist{text}</p>
+        </div>
+      </header>  
+      <div id='unity'>
+        <h1 id='title'>Unity</h1>
+        <section>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+        </section>
+      </div>
     </div>
   );
 }

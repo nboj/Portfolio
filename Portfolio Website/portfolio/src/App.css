@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  overflow: overlay;
+} 
+
+* { 
+  overflow: overlay;
 } 
 
 .App-header {
@@ -13,8 +18,14 @@
   color: white;
 }
 
+.navOptions li a {
+  color: white; 
+  text-decoration: none;
+  padding: 20px 0;
+}
+
 nav { 
-  background-color: #1e2127;  
+  background-color: #1e212798;  
   position: fixed;
   width: 100%;
 }
@@ -23,12 +34,12 @@ ul {
   list-style-type: none;
   overflow: auto;
   clear: both;
-  margin: 0;
+  margin: 0 20px 0 0;
   padding: 0;
 } 
 
 li:hover {  
-  background-color: #282c34;
+  background-color: #282c34b4;
   cursor: pointer;
   transition:cubic-bezier(1, 0, 0, 1);
 }
@@ -36,5 +47,43 @@ li:hover {
 li {
   color: white;
   float: right;
-  padding: 20px 10px;
+  padding: 20px 15px;
 } 
+
+header {
+  background-image: url('./images/PhotoMyrtleBeach.com-7.jpg');
+  background-position: center, center;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+
+}
+
+header div {
+  background-image: linear-gradient(to bottom, transparent, rgba(29, 29, 29, 0.253));
+  background-position: center;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px; 
+}   
+
+::-webkit-scrollbar {
+  width: 12px;   
+} 
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, rgb(0, 0, 0));
+  border-radius: 5px;
+}
+
+#unity {
+  background: linear-gradient(rgba(51, 51, 51, 0.247), transparent); 
+}
+
+#title {
+  text-align: center;
+  font-size: 50px;
+}
