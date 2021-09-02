@@ -41,10 +41,10 @@ function App() {
   return ( 
     <div id='html'>
       <nav>
-        <ul>
+        <ul className='navOptions'>
           <li><a>C#</a></li>
           <li><a>Web</a></li>
-          <li><a>Unity</a></li>
+          <li><a href='#unity'>Unity</a></li>
           <li><a>Java</a></li>
         </ul>
       </nav>
