@@ -44,11 +44,14 @@ li:hover {
   transition:cubic-bezier(1, 0, 0, 1);
 }
 
-li {
-  color: white;
-  float: right;
-  padding: 20px 15px;
+.navOptions li {
+  float: right;   
+  padding: 20px 0;
 } 
+
+.navOptions li a { 
+  padding: 20px 15px;
+}
 
 header {
   background-image: url('./images/PhotoMyrtleBeach.com-7.jpg');
@@ -99,12 +102,15 @@ header div {
   border: none;
   border-radius: 3px;
   background: linear-gradient(to bottom, rgba(1, 1, 1, 0.411), rgba(1, 1, 1, 0.411));
+  transition: 0.5s;
 }
 
 .scrollToTop:hover {
   background: linear-gradient(to bottom, rgba(1, 1, 1, 0.568), rgba(1, 1, 1, 0.836));
+  transition: 0.5s;
 }
 
 .scrollToTop:active {
   background: linear-gradient(to bottom, rgba(1, 1, 1, 0.842), rgb(1, 1, 1));
+  transition: 0.5s;
 }

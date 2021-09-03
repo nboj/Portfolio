@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import $ from 'jquery'; 
 import * as Scroll from 'react-scroll';
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import Carousel from './modules/carousel';
 const date = new Date();
 let i = 0;  
 let a = 1100;  
@@ -53,7 +54,7 @@ function App() {
           <li><a onClick={() => {scroll.scrollTo($('#unity').position().top)}} href='#unity'>Unity</a></li>
         </ul>
       </nav>
-      <button className='scrollToTop' onClick={scrollToTop}>/\</button>
+      <button className='scrollToTop' onClick={scrollToTop}>△</button>
       <header className='App-header'>
         <div>
           <h1>I'm Christian Auman!</h1>  
@@ -62,15 +63,7 @@ function App() {
       </header>  
       <div id='unity'>
         <h1 id='title'>Unity</h1>
-        <section>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-        </section>
+        <Carousel/>
       </div>
       <div id='web'>
         <h1 id='title'>Web</h1>
