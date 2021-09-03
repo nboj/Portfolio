@@ -57,10 +57,10 @@ function App() {
     <div id='html'>
       <nav>
         <ul className='navOptions'>
-          <li><a>C#</a></li>
-          <li><a>Web</a></li>
+          <li><a href='#cSharp'>C#</a></li>
+          <li><a href='#java'>Java</a></li>
+          <li><a href='#web'>Web</a></li>
           <li><a href='#unity'>Unity</a></li>
-          <li><a>Java</a></li>
         </ul>
       </nav>
       <button className='scrollToTop' onClick={scrollToTop}>/\</button>
@@ -72,6 +72,42 @@ function App() {
       </header>  
       <div id='unity'>
         <h1 id='title'>Unity</h1>
+        <section>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+        </section>
+      </div>
+      <div id='web'>
+        <h1 id='title'>Web</h1>
+        <section>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+        </section>
+      </div>
+      <div id='java'>
+        <h1 id='title'>Java</h1>
+        <section>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+        </section>
+      </div>
+      <div id='cSharp'>
+        <h1 id='title'>C#</h1>
         <section>
           <p>SAMPLE TEXT</p>
           <p>SAMPLE TEXT</p>
