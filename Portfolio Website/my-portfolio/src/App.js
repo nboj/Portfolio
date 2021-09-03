@@ -4,14 +4,31 @@ import $ from 'jquery';
 import * as Scroll from 'react-scroll';
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
  
-let anchorSelector = 'a[href^="#"]';
-      
-$(anchorSelector).on('click', function (e) {
-  console.log("H");
-    e.preventDefault(); 
-    let destination = $(this.hash); 
-    let scrollPosition = destination.offset().top; 
-    scroll.scrollTo(scrollPosition);
+let anchorSelector = 'a[href^="#"]';    
+// Collect all such anchor links
+let anchorList = 
+    document.querySelectorAll(anchorSelector);
+  
+// Iterate through each of the links
+anchorList.forEach(link => {
+    link.onclick = function (e) {
+      console.log("click");
+
+        // Prevent scrolling if the
+        // hash value is blank
+        e.preventDefault();
+  
+        // Get the destination to scroll to
+        // using the hash property
+        let destination = 
+            document.querySelector(this.hash);
+  
+        // Scroll to the destination using
+        // scrollIntoView method
+        destination.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
 });
 const date = new Date();
 let i = 0;  
