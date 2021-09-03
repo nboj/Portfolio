@@ -1,6 +1,18 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';  
+import $ from 'jquery'; 
+import * as Scroll from 'react-scroll';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
  
+let anchorSelector = 'a[href^="#"]';
+      
+$(anchorSelector).on('click', function (e) {
+  console.log("H");
+    e.preventDefault(); 
+    let destination = $(this.hash); 
+    let scrollPosition = destination.offset().top; 
+    scroll.scrollTo(scrollPosition);
+});
 const date = new Date();
 let i = 0;  
 let a = 1100;  
@@ -25,8 +37,11 @@ function BackwardsLoop(word, text, setText) {
 } 
 let index = 0;    
 function App() {  
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  }  
   const [text, setText] = useState(""); 
-  const texts = [", pet lover", ", game developer, varcity soccer player", ", gamer"]
+  const texts = [", pet lover...", ", game developer, varcity soccer player...", ", gamer..."]
   useEffect(() => { 
     let word = "";
     const interval = setInterval(() => {
@@ -48,6 +63,7 @@ function App() {
           <li><a>Java</a></li>
         </ul>
       </nav>
+      <button className='scrollToTop' onClick={scrollToTop}>/\</button>
       <header className='App-header'>
         <div>
           <h1>I'm Christian Auman!</h1>  

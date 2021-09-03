@@ -34,7 +34,7 @@ ul {
   list-style-type: none;
   overflow: auto;
   clear: both;
-  margin: 0;
+  margin: 0 20px 0 0;
   padding: 0;
 } 
 
@@ -47,7 +47,7 @@ li:hover {
 li {
   color: white;
   float: right;
-  padding: 20px 10px;
+  padding: 20px 15px;
 } 
 
 header {
@@ -59,9 +59,10 @@ header {
 }
 
 header div {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(29, 29, 29, 0.253));
+  background-image: linear-gradient(to bottom, transparent, rgba(29, 29, 29, 0.253));
   background-position: center;
   border-radius: 5px;
+  border: none;
   text-align: center;
   padding: 10px; 
 }   
@@ -80,10 +81,30 @@ header div {
 }
 
 #unity {
-  background: linear-gradient(rgba(51, 51, 51, 0.247), transparent); 
+  background: linear-gradient(rgba(51, 51, 51, 0.247), transparent);
 }
 
 #title {
   text-align: center;
   font-size: 50px;
+}
+
+.scrollToTop {
+  position: fixed; 
+  bottom: 0;
+  right: 0;
+  margin: 0 50px 35px 0;
+  padding: 10px 15px 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  background: linear-gradient(to bottom, rgba(1, 1, 1, 0.411), rgba(1, 1, 1, 0.411));
+}
+
+.scrollToTop:hover {
+  background: linear-gradient(to bottom, rgba(1, 1, 1, 0.568), rgba(1, 1, 1, 0.836));
+}
+
+.scrollToTop:active {
+  background: linear-gradient(to bottom, rgba(1, 1, 1, 0.842), rgb(1, 1, 1));
 }
