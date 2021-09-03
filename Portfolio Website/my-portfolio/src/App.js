@@ -53,7 +53,7 @@ function App() {
           <li><a onClick={() => {scroll.scrollTo($('#web').position().top)}} href='#web'>Web</a></li>
           <li><a onClick={() => {scroll.scrollTo($('#unity').position().top)}} href='#unity'>Unity</a></li>
         </ul>
-      </nav>
+      </nav> 
       <button className='scrollToTop' onClick={scrollToTop}>△</button>
       <header className='App-header'>
         <div>
