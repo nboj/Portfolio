@@ -2,34 +2,7 @@ import './App.css';
 import React, { useEffect, useState } from 'react';  
 import $ from 'jquery'; 
 import * as Scroll from 'react-scroll';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
- 
-let anchorSelector = 'a[href^="#"]';    
-// Collect all such anchor links
-let anchorList = 
-    document.querySelectorAll(anchorSelector);
-  
-// Iterate through each of the links
-anchorList.forEach(link => {
-    link.onclick = function (e) {
-      console.log("click");
-
-        // Prevent scrolling if the
-        // hash value is blank
-        e.preventDefault();
-  
-        // Get the destination to scroll to
-        // using the hash property
-        let destination = 
-            document.querySelector(this.hash);
-  
-        // Scroll to the destination using
-        // scrollIntoView method
-        destination.scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-});
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 const date = new Date();
 let i = 0;  
 let a = 1100;  
@@ -74,10 +47,10 @@ function App() {
     <div id='html'>
       <nav>
         <ul className='navOptions'>
-          <li><a href='#cSharp'>C#</a></li>
-          <li><a href='#java'>Java</a></li>
-          <li><a href='#web'>Web</a></li>
-          <li><a href='#unity'>Unity</a></li>
+          <li><a onClick={() => {scroll.scrollTo($('#cSharp').position().top)}} href='#cSharp'>C#</a></li>
+          <li><a onClick={() => {scroll.scrollTo($('#java').position().top)}} href='#java'>Java</a></li>
+          <li><a onClick={() => {scroll.scrollTo($('#web').position().top)}} href='#web'>Web</a></li>
+          <li><a onClick={() => {scroll.scrollTo($('#unity').position().top)}} href='#unity'>Unity</a></li>
         </ul>
       </nav>
       <button className='scrollToTop' onClick={scrollToTop}>/\</button>
