@@ -81,19 +81,18 @@
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(transparent, rgb(0, 0, 0));
   border-radius: 5px;
-}
-
-#unity {
-  background: linear-gradient(rgba(51, 51, 51, 0.247), transparent); 
-}
-
+} 
 #title {
   text-align: center;
   font-size: 50px;
 }
  
 .carousel { 
-  padding: 40px 0 100px 0;;
+  padding: 20px 0 100px 0;;
+}
+
+#unity {
+  margin: 100px 0 10px 0;
 }
 
 #unity-description {
