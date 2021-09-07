@@ -4,6 +4,7 @@ import $ from 'jquery';
 import * as Scroll from 'react-scroll';
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import Carousel from './modules/carousel';
+import Card from './modules/card';
 const date = new Date();
 let i = 0;  
 let a = 1100;  
@@ -63,7 +64,22 @@ function App() {
       </header>  
       <div id='unity'>
         <h1 id='title'>Unity</h1>
-        <Carousel/>
+        <p id='unity-description'>Take a look at some of my creations and learn about my journey to become a game developer.</p>
+        <div className='carousel'>
+          <Carousel 
+          cards = {[
+            <Card rf='https://www.cameraegg.org/wp-content/uploads/2016/01/Nikon-D500-Sample-Images-2.jpg' 
+              title='PooperPunk'
+              description="This was among one of the first games that i've ever made! It features a dynamic 'choose your own path' system with a good storyline."
+            />,
+            <Card rf='https://www.cameraegg.org/wp-content/uploads/2016/01/Nikon-D500-Sample-Images-2.jpg' 
+              title='Number Wizard'
+            />,
+            <Card rf='https://www.cameraegg.org/wp-content/uploads/2016/01/Nikon-D500-Sample-Images-2.jpg' 
+              title='Block Breaker'
+            />,
+          ]}/>
+        </div>
       </div>
       <div id='web'>
         <h1 id='title'>Web</h1>

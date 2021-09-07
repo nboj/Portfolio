@@ -1,7 +1,15 @@
-* {
-    margin: 0 auto;
-}
 
-Card {
-    float: left;
+
+#carousel {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+}    
+
+#carousel >* {
+    margin: 10px; 
+}  
+
+#carousel span {
+    margin: auto 0;
 }
