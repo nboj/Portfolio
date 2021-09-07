@@ -45,7 +45,7 @@ function App() {
     return () => clearInterval(interval);
   });
   return ( 
-    <div id='html'>
+    <div id='html' className='app'>
       <nav>
         <ul className='navOptions'>
           <li><a onClick={() => {scroll.scrollTo($('#cSharp').position().top)}} href='#cSharp'>C#</a></li>

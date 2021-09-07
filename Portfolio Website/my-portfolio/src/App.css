@@ -24,14 +24,14 @@
   padding: 20px 0;
 }
 
-nav { 
+.app nav { 
   background-color: #1e212798;  
   position: fixed;
   width: 100%;
   z-index: 10;
 }
 
-ul {
+.app ul {
   list-style-type: none;
   overflow: auto;
   clear: both;
@@ -39,7 +39,7 @@ ul {
   padding: 0;
 } 
 
-li:hover {  
+.app li:hover {  
   background-color: #282c34b4;
   cursor: pointer;
   transition:cubic-bezier(1, 0, 0, 1);
@@ -54,14 +54,14 @@ li:hover {
   padding: 20px 15px;
 }
 
-header {
+.app header {
   background-image: url('./images/PhotoMyrtleBeach.com-7.jpg');
   background-position: center, center;
   background-size: cover;
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;  
 }
 
-header div {
+.app header div {
   background-image: linear-gradient(to bottom, transparent, rgba(29, 29, 29, 0.253));
   background-position: center;
   border-radius: 5px;
