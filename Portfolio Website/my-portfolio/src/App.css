@@ -1,10 +1,12 @@
+ 
+
+.App {
+  text-align: center;   
+}  
+
 * {
   overflow: overlay;
 }
-.App {
-  text-align: center;
-  overflow: overlay;
-}  
 
 .App-header { 
   background-color: #282c34;
@@ -14,7 +16,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white; 
 }
 
 .navOptions li a {
@@ -69,18 +71,19 @@
   padding: 10px;   
 }    
 
-::-webkit-scrollbar {
+::-webkit-scrollbar { 
   width: 12px;   
 } 
 
-::-webkit-scrollbar-track {
-  background: transparent;
+::-webkit-scrollbar-track { 
+  background: transparent; 
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb { 
   background: linear-gradient(transparent, rgb(0, 0, 0));
   border-radius: 5px;
-} 
+}  
+
 #title {
   text-align: center;
   font-size: 50px;
@@ -93,6 +96,10 @@
 #unity {
   margin: 100px 0 10px 0;
 }
+ 
+#unity #title {
+  margin: 0 0 50px 0;
+}
 
 #unity-description {
   text-align: center;
@@ -100,7 +107,8 @@
 }
 
 .scrollToTop {
-  position: fixed; 
+  position: fixed;
+  z-index: 10; 
   bottom: 0;
   right: 0;
   margin: 0 50px 35px 0;
