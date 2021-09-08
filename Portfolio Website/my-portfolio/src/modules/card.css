@@ -36,11 +36,28 @@
     background:rgba(10, 6, 26, 0.781);
     cursor: pointer;
     transition: .5s;
-}
-
-@media screen and (max-width: 1127px) {
-    .card {
-        width: 250px;
-        height: 400px;
-    }
 } 
+
+@media screen and (max-width: 450px) {
+    .card {
+        width: 100%;   
+    }
+    #carousel #left-arrow {
+        position: absolute;
+        left: 10px; 
+        top: 164%; 
+    }
+    #carousel #right-arrow {
+        position: absolute;
+        right: 10px; 
+        top: 164%; 
+    }
+    div#carousel {
+        padding: 0;
+    }
+    #carousel #right-arrow #arrowButton, #carousel #left-arrow #arrowButton {
+        padding: 10px 5px;
+        background: linear-gradient(rgba(167, 167, 167, 0.61), rgba(167, 167, 167, 0.76));
+        color: rgb(61, 61, 61);
+    }
+}

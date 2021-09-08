@@ -5,7 +5,8 @@ import './carousel.css';
 import $ from 'jquery';
 
 
-let symbolIndex = 0;
+let symbolIndex = 0; 
+let widthChangeNum = 1090;
 const Carousel = (props) => {
     const [cardList, setCardList] = useState(props.cards);  
     const [symbolList, setSymbolList] = useState([]);
@@ -34,8 +35,8 @@ const Carousel = (props) => {
         setTimeout(() => { 
             $('#card-3').css({transform: 'translateY(10px)'});
             $('#card-1').css({transform: 'translateY(10px)'});
-            $('#card-1').css({filter: 'blur(1px)'});
-            $('#card-3').css({filter: 'blur(1px)'});
+            $('#card-1').css({filter: 'blur(1.5px)'});
+            $('#card-3').css({filter: 'blur(1.5px)'});
         }, 250);
     }
 
@@ -56,33 +57,36 @@ const Carousel = (props) => {
         setTimeout(() => { 
             $('#card-3').css({transform: 'translateY(10px)'});
             $('#card-1').css({transform: 'translateY(10px)'});
-            $('#card-1').css({filter: 'blur(1px)'});
-            $('#card-3').css({filter: 'blur(1px)'});
+            $('#card-1').css({filter: 'blur(1.5px)'});
+            $('#card-3').css({filter: 'blur(1.5px)'});
         }, 250);
     }
     useEffect(() => {
         changeSymbolList(symbolIndex);
     }, []);
+    window.onresize = () => {
+        setCardList(cardList);
+    }
     return(
         <div>
-        <div id='carousel'> 
-            <span onClick={shiftListLeft}><ArrowButton symbol='◀' /></span> 
-            {cardList.map((card, index) => {   
-                if (index > (window.outerWidth > 1127 ? 2 : 0)) {
-                    return(<span></span>);
-                } else if (window.outerWidth <= 1127) { 
-                    return(<div id={'card-2'}>{card}</div>);
-                }else if (index == 1) {
-                    return(<div id={'card-' + (index + 1)}>{card}</div>);
-                } else {
-                    return(<div id={'card-' + (index + 1)}>{card}</div>);
-                } 
-            })}
-            <span onClick={shiftListRight}><ArrowButton symbol='▶' /></span>
-        </div>
-        <div id='symbol-list'>  
-            {symbolList}
-        </div>
+            <div id='carousel'> 
+                <span id='left-arrow' onClick={shiftListLeft}><ArrowButton symbol='◀' /></span> 
+                {cardList.map((card, index) => {   
+                    if (index > (window.outerWidth > widthChangeNum ? 2 : 0)) {
+                        return(<span></span>);
+                    } else if (window.outerWidth <= widthChangeNum) { 
+                        return(<div id={'card-2'}>{card}</div>);
+                    }else if (index == 1) {
+                        return(<div id={'card-' + (index + 1)}>{card}</div>);
+                    } else {
+                        return(<div id={'card-' + (index + 1)}>{card}</div>);
+                    } 
+                })}
+                <span id='right-arrow' onClick={shiftListRight}><ArrowButton symbol='▶' /></span>
+            </div>
+            <div id='symbol-list'>  
+                {symbolList}
+            </div>
         </div>
     );
 }

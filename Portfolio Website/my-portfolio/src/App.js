@@ -7,12 +7,7 @@ import Unity from './modules/unity';
 import Web from './modules/web';
 const date = new Date();
 let i = 0;  
-let a = 1100;  
-const UnityPooperPunk = () => {
-  return(
-    <Fragment>hello there!</Fragment>
-  );
-}
+let a = 1100;   
 function ForwardsLoop(word, text, setText) {
   if (!$('header.App-header div').is(':visible')) { 
     return;
