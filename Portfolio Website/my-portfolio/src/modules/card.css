@@ -32,9 +32,15 @@
     margin: 10px 20px;
 }   
 
-#card-2 .card:hover {   
-    margin-top: 10px;
+#card-2 .card:hover {    
     background:rgba(10, 6, 26, 0.781);
     cursor: pointer;
     transition: .5s;
 }
+
+@media screen and (max-width: 1127px) {
+    .card {
+        width: 250px;
+        height: 400px;
+    }
+} 

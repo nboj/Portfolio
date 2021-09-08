@@ -1,14 +1,26 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Card from './card';
 import ArrowButton from './arrowButton';
 import './carousel.css';
 import $ from 'jquery';
 
 
+let symbolIndex = 0;
 const Carousel = (props) => {
-    const [cardList, setCardList] = useState(props.cards);
-    const shiftListLeft = () => {
+    const [cardList, setCardList] = useState(props.cards);  
+    const [symbolList, setSymbolList] = useState([]);
+    const changeSymbolList = (index) => { 
+        var tempSymbolList = [];
+        for (var i = 0; i < cardList.length; i++) {
+            tempSymbolList.push(i==index?'⬤':'〇');
+        } 
+        setSymbolList(tempSymbolList);
+    }  
+    const shiftListLeft = () => { 
+        symbolIndex--;
         const tempList = [];
+        symbolIndex = symbolIndex < 0 ? cardList.length - 1 : symbolIndex; 
+        changeSymbolList(symbolIndex);
         for (var i = 0; i < cardList.length - 1; i++) {
             tempList.push(cardList[i]); 
         }
@@ -27,7 +39,10 @@ const Carousel = (props) => {
         }, 250);
     }
 
-    const shiftListRight = () => {
+    const shiftListRight = () => {  
+        symbolIndex++; 
+        symbolIndex = symbolIndex >= cardList.length ? 0: symbolIndex; 
+        changeSymbolList(symbolIndex);
         const tempList = [];
         for (var i = 1; i < cardList.length; i++) {
             tempList.push(cardList[i]); 
@@ -45,10 +60,14 @@ const Carousel = (props) => {
             $('#card-3').css({filter: 'blur(1px)'});
         }, 250);
     }
+    useEffect(() => {
+        changeSymbolList(symbolIndex);
+    }, []);
     return(
+        <div>
         <div id='carousel'> 
-            <span onClick={shiftListLeft}><ArrowButton symbol='◀' /></span>
-            {cardList.map((card, index) => { 
+            <span onClick={shiftListLeft}><ArrowButton symbol='◀' /></span> 
+            {cardList.map((card, index) => {   
                 if (index > (window.outerWidth > 1127 ? 2 : 0)) {
                     return(<span></span>);
                 } else if (window.outerWidth <= 1127) { 
@@ -60,6 +79,10 @@ const Carousel = (props) => {
                 } 
             })}
             <span onClick={shiftListRight}><ArrowButton symbol='▶' /></span>
+        </div>
+        <div id='symbol-list'>  
+            {symbolList}
+        </div>
         </div>
     );
 }
