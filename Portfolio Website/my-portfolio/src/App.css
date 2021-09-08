@@ -1,13 +1,12 @@
+* {
+  overflow: overlay;
+}
 .App {
   text-align: center;
   overflow: overlay;
-} 
+}  
 
-* { 
-  overflow: overlay;
-} 
-
-.App-header {
+.App-header { 
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -68,7 +67,7 @@
   border: none;
   text-align: center;
   padding: 10px;   
-}   
+}    
 
 ::-webkit-scrollbar {
   width: 12px;   

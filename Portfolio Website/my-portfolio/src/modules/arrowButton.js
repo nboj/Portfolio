@@ -3,7 +3,7 @@ import './arrowButton.css';
 
 const ArrowButton = (props) => {
     return(
-        <div id='arrowButton'>
+        <div className='arrowButton'>
             <p>{props.symbol}</p>
         </div>
     );

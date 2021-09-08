@@ -66,6 +66,7 @@ const Carousel = (props) => {
     }, []);
     window.onresize = () => {
         setCardList(cardList);
+        $('#card-2').css({filter: 'blur(0px)'});
     }
     return(
         <div>
