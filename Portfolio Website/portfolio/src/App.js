@@ -1,10 +1,17 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';  
- 
+import React, { Fragment, useEffect, useState } from 'react';  
+import $ from 'jquery';  
+import { animateScroll as scroll} from 'react-scroll';
+import Unity from './modules/unity';
+import Web from './modules/web'; 
+
 const date = new Date();
 let i = 0;  
-let a = 1100;  
+let a = 1100;   
 function ForwardsLoop(word, text, setText) {
+  if (!$('header.App-header div').is(':visible')) { 
+    return;
+  }
   setTimeout(() => {  
     setText(word.substring(0, i));
     i++;
@@ -16,6 +23,9 @@ function ForwardsLoop(word, text, setText) {
   }, 100);
 } 
 function BackwardsLoop(word, text, setText) {
+  if (!$('header.App-header div').is(':visible')) { 
+    return;
+  }
   setTimeout(() => {  
     setText(word.substring(0, i));
     i--;
@@ -24,9 +34,12 @@ function BackwardsLoop(word, text, setText) {
   }, 50); 
 } 
 let index = 0;    
-function App() {  
+function App() {   
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  }  
   const [text, setText] = useState(""); 
-  const texts = [", pet lover", ", game developer, varcity soccer player", ", gamer"]
+  const texts = [", pet lover...", ", game developer, varcity soccer player...", ", gamer..."]
   useEffect(() => { 
     let word = "";
     const interval = setInterval(() => {
@@ -39,23 +52,26 @@ function App() {
     return () => clearInterval(interval);
   });
   return ( 
-    <div id='html'>
+    <div id='html' className='app'>
       <nav>
         <ul className='navOptions'>
-          <li><a>C#</a></li>
-          <li><a>Web</a></li>
-          <li><a href='#unity'>Unity</a></li>
-          <li><a>Java</a></li>
+          <li><a onClick={() => {scroll.scrollTo($('#cSharp').position().top)}} href='#cSharp'>C#</a></li>
+          <li><a onClick={() => {scroll.scrollTo($('#java').position().top)}} href='#java'>Java</a></li>
+          <li><a onClick={() => {scroll.scrollTo($('#web').position().top)}} href='#web'>Web</a></li>
+          <li><a onClick={() => {scroll.scrollTo($('#unity').position().top)}} href='#unity'>Unity</a></li>
         </ul>
-      </nav>
+      </nav> 
+      <button className='scrollToTop' onClick={scrollToTop}>△</button>
       <header className='App-header'>
         <div>
           <h1>I'm Christian Auman!</h1>  
           <p>{date.getFullYear() - 2003 - (date.getMonth() < 8 ? 1 : 0)} years old, computer scientist{text}</p>
         </div>
       </header>  
-      <div id='unity'>
-        <h1 id='title'>Unity</h1>
+      <Unity />
+      <Web />
+      <div id='java'>
+        <h1 id='title'>Java</h1>
         <section>
           <p>SAMPLE TEXT</p>
           <p>SAMPLE TEXT</p>
@@ -66,7 +82,19 @@ function App() {
           <p>SAMPLE TEXT</p>
         </section>
       </div>
-    </div>
+      <div id='cSharp'>
+        <h1 id='title'>C#</h1>
+        <section>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+          <p>SAMPLE TEXT</p>
+        </section>
+      </div>
+    </div> 
   );
 }
 
