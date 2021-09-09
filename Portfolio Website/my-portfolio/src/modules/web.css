@@ -1,14 +1,12 @@
 div >* { 
     overflow: visible;
-}
-
-
+} 
 
 div#web {  
     position: relative;   
-    background: #282c34;
+    background: linear-gradient(#99e2b4 20%, #88d4ab, #78c6a3, #67b99a, #56ab91, #469d89, #358f80, #248277);
     padding: 20px 0;
-    color: white; 
+    color: white;  
 }  
 div#web:after {    
     position: absolute;
@@ -26,30 +24,69 @@ div#web:after {
 }
 
 #web #title {
-    margin: 100px 0 150px 0;
+    margin: 100px 0 0 0;
     font-size: 55px;
-}
+} 
 
 #flex {
     display: flex;
     flex-direction: row; 
     flex-flow: wrap;
     justify-content: center;
-    background-image: url('https://dm2304files.storage.live.com/y4mgKhzKiHxvYMjxcyfkFkFOw1vv8VWqIAN7YlrfnqsQ4RiHprZcunV0w545fhZj2EYWvT-cv_GdptcxDiF8fbyA-fxJ1t9FYgjMCxKt7KuL0TkWqR9bEfPzEa27mU0Jj_rRT9Bj48USfgsynHWDF7ZjPkPjxDZgn4JAnHpwTOaWzkI_Hk86JHHQNb_P0sBoeFn?width=1919&height=1080&cropmode=none');
-    padding: 200px 0;
+    padding: 300px 0;
     background-size: cover;
     background-position: center center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 50px 36px -28px inset, rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;  
     ;   
-}  
+    width: 100%;
+    height: 100%; 
+}   
 
 #flex div {
     margin: 40px;
     padding: 10px;
-    background: #fcbf49;
+    background: linear-gradient(to top, #036666, #036666);
     border-radius: 2px; 
     width: 400px;
     height: 400px;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-} 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+}   
+
+#react { 
+    color: white;
+    background: linear-gradient(to bottom, #0d47a1, #1565c0, #1976d2, #1e88e5, #2196f3, #42a5f5, #64b5f6, #90caf9, #bbdefb, #e3f2fd);
+}
+
+#react h1 {
+    margin-top: 0;
+    padding-top: 100px;
+}
+
+#react { 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 50px 36px -28px inset;  
+}
+
+#flex2 {
+    display: flex;
+    flex-direction: row; 
+    flex-flow: wrap;
+    justify-content: center;
+    padding: 300px 0;
+    background-size: cover;
+    background-position: center center;
+    ;   
+    width: 100%;
+    height: 100%;   
+}   
+
+#flex2 div {
+    color: black;
+    margin: 40px;
+    padding: 10px;
+    background: linear-gradient(to top, #e3f2fd, #e3f2fd);
+    border-radius: 2px; 
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+}   

@@ -30,6 +30,7 @@
   position: fixed;
   width: 100%;
   z-index: 10;
+  backdrop-filter: blur(9px);
 }
 
 .app ul {
@@ -68,21 +69,21 @@
   border-radius: 5px;
   border: none;
   text-align: center;
-  padding: 10px;   
+  padding: 10px;    
 }    
 
-::-webkit-scrollbar { 
+::-webkit-scrollbar {  
   width: 12px;   
 } 
 
-::-webkit-scrollbar-track { 
-  background: transparent; 
+::-webkit-scrollbar-track {   
+  margin-top: 61px; 
 }
 
 ::-webkit-scrollbar-thumb { 
-  background: linear-gradient(transparent, rgb(0, 0, 0));
-  border-radius: 5px;
-}  
+  background: #0d47a1;
+  border-radius: 2px; 
+ }  
 
 #title {
   text-align: center;
@@ -117,6 +118,7 @@
   border: none;
   border-radius: 3px;
   background: linear-gradient(to bottom, rgba(1, 1, 1, 0.411), rgba(1, 1, 1, 0.411));
+  backdrop-filter: blur(8px);
   transition: 0.5s;
 }
 
