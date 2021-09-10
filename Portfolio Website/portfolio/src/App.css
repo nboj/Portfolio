@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;   
-}  
+}   
 
 * {
   overflow: overlay;
@@ -96,6 +96,10 @@
 
 #unity {
   margin: 100px 0 10px 0;
+}
+
+#unity >* {
+  transition: .5s;
 }
  
 #unity #title {
