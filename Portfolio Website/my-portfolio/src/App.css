@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;   
-}  
+}   
 
 * {
   overflow: overlay;
@@ -74,14 +74,10 @@
 
 ::-webkit-scrollbar {  
   width: 12px;   
-} 
-
-::-webkit-scrollbar-track {   
-  margin-top: 61px; 
-}
+}  
 
 ::-webkit-scrollbar-thumb { 
-  background: #0d47a1;
+  background: #0d47a1; 
   border-radius: 2px; 
  }  
 
@@ -96,6 +92,10 @@
 
 #unity {
   margin: 100px 0 10px 0;
+}
+
+#unity >* {
+  transition: .5s;
 }
  
 #unity #title {

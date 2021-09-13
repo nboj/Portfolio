@@ -9,16 +9,19 @@ const Web = () => {
                     <h1 id='title'>Web Development</h1> 
                     <div id='flex'>
                         <div>
-                            <h1>Html</h1>
-                            <blockquote>
-                                <p>Hello there!</p>
-                            </blockquote>
+                            <h1 className='title'>Html</h1>
+                            <span className='underline' /> 
+                            <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p> 
                         </div>
                         <div>
-                            <h1>Css</h1>
+                            <h1 className='title'>Css</h1>
+                            <span className='underline' />
+                            <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p>
                         </div>
                         <div>
-                            <h1>Javascript</h1>
+                            <h1 className='title'>Javascript</h1>
+                            <span className='underline' />
+                            <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p>
                         </div>  
                     </div>
                 </div> 

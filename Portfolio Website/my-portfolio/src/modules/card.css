@@ -10,6 +10,11 @@
     transition: .5s;
 } 
 
+.link {
+    color: white;
+    text-decoration: none;
+}
+
 .card img {
     width: 100%;
     height: 200px;
@@ -39,6 +44,11 @@
     cursor: pointer;
     transition: .5s;
 } 
+
+#card-1, #card-3 {
+    pointer-events: none;
+    user-select: none;
+}
 
 @media screen and (max-width: 450px) {
     .card { 
