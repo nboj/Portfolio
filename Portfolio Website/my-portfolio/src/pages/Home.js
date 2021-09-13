@@ -35,6 +35,9 @@ function BackwardsLoop(word, text, setText) {
 } 
 let index = 0;    
 function Home() {   
+  useEffect(() => { 
+    $('html').css({background: 'white'});
+  }, []);
   const scrollToTop = () => {
     scroll.scrollToTop();
   }  
