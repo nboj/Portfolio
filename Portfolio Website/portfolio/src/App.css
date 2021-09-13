@@ -39,8 +39,7 @@
   clear: both;
   margin: 0 20px 0 0;
   padding: 0;
-} 
-
+}  
 .app li:hover {  
   background-color: #282c34b4;
   cursor: pointer;
@@ -74,11 +73,7 @@
 
 ::-webkit-scrollbar {  
   width: 12px;   
-} 
-
-::-webkit-scrollbar-track {   
-  margin-top: 61px; 
-}
+}  
 
 ::-webkit-scrollbar-thumb { 
   background: #0d47a1; 

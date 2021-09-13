@@ -50,9 +50,9 @@ function Home() {
       i = 0;
     }, a);    
     return () => clearInterval(interval);
-  });
+  });  
   return ( 
-    <div id='html' className='app'> 
+    <div id='html' className='app'>  
       <nav>
         <ul className='navOptions'>
           <li><a onClick={() => {scroll.scrollTo($('#cSharp').position().top)}} href='#cSharp'>C#</a></li>

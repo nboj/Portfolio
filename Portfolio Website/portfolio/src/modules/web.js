@@ -27,6 +27,7 @@ const Web = () => {
                 </div> 
             </div> 
             <div id='react'>
+                <img src='https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png' width='400px' className='reactLogo'/>
                 <h1 id='title'>React</h1>
                     <div id='flex2'>
                         <div>

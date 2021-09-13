@@ -1,3 +1,32 @@
-.title {
-    text-align: center;
+@import url("https://use.typekit.net/jvp8uqu.css");
+
+#page {
+    margin: 0;   
+    padding: 0;
+    color: #141313;
+}   
+
+.title {   
+    position: relative;
+    display: block;
+    float: left;
+    font-family: chantal, sans-serif; 
+    padding: 0;   
+    bottom: 0px;
+    margin: 0;
+}     
+
+#leftSide {
+    width: 100%;
 }
+
+#leftSide img { 
+    float: right;
+    width: 70%; 
+}
+
+.description { 
+    clear: both;
+    padding: 50px 20px;
+    text-align: center;   
+}    

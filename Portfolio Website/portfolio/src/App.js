@@ -1,13 +1,13 @@
 import React from 'react';
-
 import { Route } from 'react-router-dom';  
 import Home from './pages/Home'; 
 import UnityLinks, { NumberWizard, PooperPunk, BlockBreaker, Platformer } from './pages/UnityLinks';
+import $ from 'jquery'; 
 
-const App = () => {
+const App = () => { 
   return ( 
     <div>
-      <Route exact path='/'>
+      <Route exact path='/'> 
         <Home />
       </Route>
       <Route path='/NumberWizard'>
