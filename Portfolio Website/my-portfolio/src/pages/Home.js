@@ -50,7 +50,7 @@ function Home() {
       i = 0;
     }, a);    
     return () => clearInterval(interval);
-  }); 
+  });  
   return ( 
     <div id='html' className='app'>  
       <nav>
