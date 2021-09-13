@@ -4,8 +4,10 @@ import styles from './UnityPage.module.css';
 const UnityPage = (props) => {
     return(
         <div id={styles.page}>
-            <div id={styles.leftSide}> 
-                <h1 className={styles.title}>{props.title}</h1>
+            <div id={styles.leftSide}>  
+                <div className={styles.titleBackground}> 
+                    <h1 className={styles.title}>{props.title}</h1> 
+                </div>
                 <img src={props.src}></img>
             </div>
             <div>
