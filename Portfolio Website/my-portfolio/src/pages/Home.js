@@ -42,7 +42,7 @@ function Home() {
     scroll.scrollToTop();
   }  
   const [text, setText] = useState(""); 
-  const texts = [", pet lover...", ", game developer, varcity soccer player...", ", gamer..."]
+  const texts = [", pet lover...", ", game developer...", ", gamer...", ", varcity soccer player..."]
   useEffect(() => { 
     let word = "";
     const interval = setInterval(() => {
