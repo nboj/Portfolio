@@ -1,7 +1,17 @@
 import React from 'react';
+import { useState } from 'react';
 import './web.css';
-
+import $ from 'jquery';
+import { useEffect } from 'react/cjs/react.development';
 const Web = () => {
+    const [offsetY, setOffsetY] = useState(window.pageYOffset);
+    const handleScroll = () => {
+        setOffsetY(window.pageYOffset);
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []); 
     return(
         <div>
             <div id='web'> 
@@ -27,7 +37,7 @@ const Web = () => {
                 </div> 
             </div> 
             <div id='react'>
-                <img src='https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png' width='400px' className='reactLogo'/>
+                <img src='https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png' width='400px' className='reactLogo' style={{transform: `translateX(${offsetY * 0.2 - 800}px)`}}/>
                 <h1 id='title'>React</h1>
                     <div id='flex2'>
                         <div>
