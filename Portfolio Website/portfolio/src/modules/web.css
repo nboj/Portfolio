@@ -54,7 +54,7 @@ div#web:after {
 }   
 
 #react { 
-    color: white;
+    color: white;  
     background: linear-gradient(to bottom, #0d47a1, #1565c0, #1976d2, #1e88e5, #2196f3, #42a5f5, #64b5f6, #90caf9, #bbdefb, #e3f2fd, transparent);
 }
 
@@ -74,7 +74,7 @@ div#web:after {
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 #web .title {
@@ -99,7 +99,7 @@ div#web:after {
     flex-direction: row; 
     flex-flow: wrap;
     justify-content: center;
-    padding: 300px 0;
+    padding: 300px 0 300px 0;
     background-size: cover;
     background-position: center center;
     ;   
