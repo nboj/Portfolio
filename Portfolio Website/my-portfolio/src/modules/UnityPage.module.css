@@ -28,7 +28,9 @@
 } 
 
 
-#leftSide img {   
+#leftSide img {    
+    position: relative;
+    z-index: -1;
     margin: 0;
     padding: 0;  
     width: 100%;
@@ -42,22 +44,23 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
-#descriptionBackground { 
+#descriptionBackground {  
+    padding: 100px 0;
     color: black;
-    width: 60%;
-    margin: 300px auto;
-    background: white; 
-    border-radius: 5px;
+    width: 60%; 
+    width: 100%;
+    background: white;  
 }
 
 .description {  
-    padding: 20px;
-    margin: 0;
+    padding: 20px;  
+    text-align: center;
+    margin-bottom: 100px; 
 }
 
 #descriptionTitle {
-    padding: 20px 20px 0 20px;
-    margin: 0;
+    text-align: center;  
+    margin: 20px 0;
 }
  
 #back { 
