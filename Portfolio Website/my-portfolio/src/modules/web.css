@@ -74,7 +74,7 @@ div#web:after {
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 #web .title {
