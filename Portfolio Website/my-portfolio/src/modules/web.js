@@ -3,7 +3,9 @@ import { useState } from 'react';
 import './web.css';
 import $ from 'jquery';
 import { useEffect } from 'react';
+
 const Web = () => {
+    
     const [offsetY, setOffsetY] = useState(window.pageYOffset);
     const handleScroll = () => {
         setOffsetY(window.pageYOffset);
@@ -12,6 +14,7 @@ const Web = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []); 
+
     return(
         <div>
             <div id='web'> 
