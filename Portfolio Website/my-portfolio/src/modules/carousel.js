@@ -12,11 +12,11 @@ const Carousel = (props) => {
     const getList = () => {
         const tempList=[];
         if (window.outerWidth > widthChangeNum)
-            tempList.push(props.cards[(cardIndex - 1) < 0 ? props.cards.length - 1 : cardIndex - 1], props.cards[cardIndex], props.cards[(cardIndex + 1) > props.cards.length - 1 ? 0 : cardIndex + 1])
+            tempList.push(props.cards[(cardIndex - 1) < 0 ? props.cards.length - 1 : cardIndex - 1], props.cards[cardIndex], props.cards[(cardIndex + 1) > props.cards.length - 1 ? 0 : cardIndex + 1]);
         else
             tempList.push(props.cards[cardIndex]);
         return tempList;
-    }
+    };
     const [cardList, setCardList] = useState(getList());  
     const [symbolList, setSymbolList] = useState([]);
     const changeSymbolList = (index) => { 
@@ -25,7 +25,7 @@ const Carousel = (props) => {
             tempSymbolList.push(i===index?'⬤':'〇');
         } 
         setSymbolList(tempSymbolList);
-    }  
+    };
     const shiftListLeft = () => { 
         symbolIndex--;
         cardIndex--;
@@ -41,7 +41,7 @@ const Carousel = (props) => {
             $('#card-1').css({filter: 'blur(1.5px)'});
             $('#card-3').css({filter: 'blur(1.5px)'});
         }, 250);
-    }
+    };
 
     const shiftListRight = () => {  
         symbolIndex++; 
@@ -60,7 +60,7 @@ const Carousel = (props) => {
             $('#card-1').css({filter: 'blur(1.5px)'});
             $('#card-3').css({filter: 'blur(1.5px)'});
         }, 250);
-    }
+    };
     useEffect(() => {
         changeSymbolList(symbolIndex);
     }, []);
@@ -69,7 +69,7 @@ const Carousel = (props) => {
         $('#card-1').css({filter: 'blur(1.5px)'});
         $('#card-2').css({filter: 'blur(0)'});
         $('#card-3').css({filter: 'blur(1.5px)'});
-    }
+    };
     return(
         <div>
             <div id='carousel'> 
@@ -89,6 +89,6 @@ const Carousel = (props) => {
             </div>
         </div>
     );
-}
+};
 
 export default Carousel;
