@@ -5,7 +5,7 @@ div >* {
 div#web {  
     position: relative;   
     background: linear-gradient(#99e2b4 20%, #88d4ab, #78c6a3, #67b99a, #56ab91, #469d89, #358f80, #248277);
-    padding: 20px 0;
+    padding: 20px 0 100px 0;
     color: white;  
 }  
 
@@ -22,7 +22,7 @@ div#web:after {
     transform-origin: top right;
     transform: skewY(5deg);
     z-index: -1;
-}
+} 
 
 #web #title {
     margin: 100px 0 0 0;
@@ -55,15 +55,10 @@ div#web:after {
 
 #react { 
     color: white;  
-    background: linear-gradient(to bottom, #0d47a1, #1565c0, #1976d2, #1e88e5, #2196f3, #42a5f5, #64b5f6, #90caf9, #bbdefb, #e3f2fd, transparent);
-    background-size: cover;
+    background: linear-gradient(to bottom, #1565c0, #1976d2, #1e88e5, #2196f3, #42a5f5, #64b5f6, #90caf9, #bbdefb, #e3f2fd, transparent);
     background-position: center, center;
-}
-
-#react #title {
-    margin: 0;
-    padding: 0;
-}
+    background-size: cover;
+}  
 
 #react h1 {
     margin-top: 0;
@@ -72,7 +67,7 @@ div#web:after {
 
 #react .reactLogo {
     position: relative; 
-    top: -180px;
+    top: -380px;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -96,12 +91,19 @@ div#web:after {
     margin: 0 auto;
 }
 
+#react #title {
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    transform: translateY(-250px);
+}
+
 #flex2 {
     display: flex;
     flex-direction: row; 
     flex-flow: wrap;
     justify-content: center;
-    padding: 300px 0 300px 0;
+    padding: 0 0 300px 0;
     background-size: cover;
     background-position: center center;
     ;   
@@ -122,3 +124,18 @@ div#web:after {
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
 }   
+
+#transitionImg {  
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    border: none;
+    clip-path: inset(2px 1px 1px 1px);  
+    background-image: url('../images/BetterSplash2.png');
+    background-position: bottom, center;
+    background-size: cover;
+    width: 100%; 
+    margin-bottom: -2px;
+    padding: 0;
+    height: 500px; 
+}
