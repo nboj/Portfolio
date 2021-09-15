@@ -5,7 +5,7 @@ div >* {
 div#web {  
     position: relative;   
     background: linear-gradient(#99e2b4 20%, #88d4ab, #78c6a3, #67b99a, #56ab91, #469d89, #358f80, #248277);
-    padding: 20px 0 100px 0;
+    padding: 20px 0 200px 0;
     color: white;  
 }  
 
@@ -34,7 +34,7 @@ div#web:after {
     flex-direction: row; 
     flex-flow: wrap;
     justify-content: center;
-    padding: 300px 0;
+    padding: 200px 0 300px 0;
     background-size: cover;
     background-position: center center;
     ;   
@@ -52,6 +52,18 @@ div#web:after {
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
 }   
+
+#flex div:nth-child(1), #flex2 div:nth-child(1) {
+    transform: translateX(-25px);
+}
+
+#flex div:nth-child(2), #flex2 div:nth-child(2) {
+    transform: translateY(-25px);
+}
+
+#flex div:nth-child(3), #flex2 div:nth-child(3) {
+    transform: translateX(25px);
+}
 
 #react { 
     color: white;  
@@ -131,7 +143,7 @@ div#web:after {
     bottom: 0px;
     border: none;
     clip-path: inset(2px 1px 1px 1px);  
-    background-image: url('../images/BetterSplash2.png');
+    background-image: url('../images/BetterSplash.png');
     background-position: bottom, center;
     background-size: cover;
     width: 100%; 

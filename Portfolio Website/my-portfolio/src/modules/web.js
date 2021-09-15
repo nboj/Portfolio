@@ -18,17 +18,17 @@ const Web = () => {
                 <div id='outer-flex'>
                     <h1 id='title'>Web Development</h1> 
                     <div id='flex'>
-                        <div>
+                        <div style={{transform: `translateX(${(offsetY * 0.09 - 170) >= 0 ? 0 : (offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.01 - 17}`}}>
                             <h1 className='title'>Html</h1>
                             <span className='underline' /> 
                             <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p> 
                         </div>
-                        <div>
+                        <div style={{transform: `translateY(${(offsetY * 0.09 - 170) >= 0 ? 0 : (offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.01 - 17}`}}>
                             <h1 className='title'>Css</h1>
                             <span className='underline' />
                             <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p>
                         </div>
-                        <div>
+                        <div style={{transform: `translateX(${-(offsetY * 0.09 - 170) <= 0 ? 0 : -(offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.01 - 17}`}}>
                             <h1 className='title'>Javascript</h1>
                             <span className='underline' />
                             <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p>
@@ -41,18 +41,21 @@ const Web = () => {
                 <img src='https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png' width='400px' className='reactLogo' style={{transform: `translateX(${offsetY * 0.2 -750}px) rotate(${offsetY * 0.1}deg)`}}/>
                 <h1 id='title'>React</h1>
                     <div id='flex2'>
-                        <div>
-                            <h1>Html</h1>
-                            <blockquote>
-                                <p>Hello there!</p>
-                            </blockquote>
+                        <div style={{transform: `translateX(${(offsetY * 0.09 - 300) >= 0 ? 0 : (offsetY * 0.09 - 300)}px)`, opacity: `${offsetY * 0.0048 - 14.87}`}}>
+                            <h1 className='title'>Html</h1>
+                            <span className='underline' /> 
+                            <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p> 
                         </div>
-                        <div>
-                            <h1>Css</h1>
+                        <div style={{transform: `translateY(${(offsetY * 0.09 - 300) >= 0 ? 0 : (offsetY * 0.09 - 300)}px)`, opacity: `${offsetY * 0.0048 - 14.87}`}}>
+                            <h1 className='title'>Css</h1>
+                            <span className='underline' />
+                            <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p>
                         </div>
-                        <div>
-                            <h1>Javascript</h1>
-                        </div>  
+                        <div style={{transform: `translateX(${-(offsetY * 0.09 - 300) <= 0 ? 0 : -(offsetY * 0.09 - 300)}px)`, opacity: `${offsetY * 0.0048 - 14.87}`}}>
+                            <h1 className='title'>Javascript</h1>
+                            <span className='underline' />
+                            <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p>
+                        </div>   
                     </div>
             </div>
         </div>
