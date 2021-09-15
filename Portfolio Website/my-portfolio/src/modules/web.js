@@ -38,7 +38,7 @@ const Web = () => {
             <img id='transitionImg' />
             </div> 
             <div id='react'>
-                <img />
+                <img  src='https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png' width='400px' className='reactLogo' style={{transform: `translateX(${offsetY * 0.2 -750}px) rotate(${offsetY * 0.1}deg)`}}/>
                 <h1 id='title'>React</h1>
                     <div id='flex2'>
                         <div style={{transform: `translateX(${(offsetY * 0.09 - 300) >= 0 ? 0 : (offsetY * 0.09 - 300)}px)`, opacity: `${offsetY * 0.0048 - 14.87}`}}>
