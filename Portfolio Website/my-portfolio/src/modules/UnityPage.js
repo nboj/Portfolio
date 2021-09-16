@@ -18,14 +18,14 @@ const UnityPage = (props) => {
     return(
         <div id={styles.page}> 
             <Link to='' id={styles.back}><ArrowButton symbol='◀ Home'/></Link> 
-             <div id={styles.leftSide} >  
-                <div className={styles.titleBackground} style={{transform: `translateY(${offsetY * 0.6}px)`}}>  
+             <div id={styles.leftSide}>  
+                <div className={styles.titleBackground} >  
                     <h1 className={styles.title} style={{
                         transform: `skewY(${Math.pow(Math.pow(offsetY, 4), .1) / 4}deg) translateY(${-offsetY * 0.6}px)`,
                         opacity: `${-Math.pow(Math.pow(offsetY, 4), .2) / 4 * 0.05 + 1 <= 0 ? 0 : -Math.pow(Math.pow(offsetY, 4), .2) / 4 * 0.05 + 1}`,
                     }}>{props.title}</h1>  
                 </div>
-                <img src={props.src}></img>
+                <img src={props.src} style={{transform: `translateY(${offsetY * 0.6}px)`}}/>
             </div> 
             <div id={styles.descriptionBackground}>  
                 <h1 id={styles.descriptionTitle}>About</h1> 
