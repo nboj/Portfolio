@@ -21,17 +21,17 @@ const Web = () => {
                 <div id='outer-flex'>
                     <h1 id='title'>Web Development</h1> 
                     <div id='flex'>
-                        <div style={{transform: `translateX(${(offsetY * 0.09 - 170) >= 0 ? 0 : (offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.01 - 17}`}}>
+                        <div style={{transform: `translateX(${(offsetY * 0.09 - 170) >= 0 ? 0 : (offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.0048 - 8}`}}>
                             <h1 className='title'>Html</h1>
                             <span className='underline' /> 
                             <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p> 
                         </div>
-                        <div style={{transform: `translateY(${(offsetY * 0.09 - 170) >= 0 ? 0 : (offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.01 - 17}`}}>
+                        <div style={{transform: `translateY(${(offsetY * 0.09 - 170) >= 0 ? 0 : (offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.0048 - 8}`}}>
                             <h1 className='title'>Css</h1>
                             <span className='underline' />
                             <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p>
                         </div>
-                        <div style={{transform: `translateX(${-(offsetY * 0.09 - 170) <= 0 ? 0 : -(offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.01 - 17}`}}>
+                        <div style={{transform: `translateX(${-(offsetY * 0.09 - 170) <= 0 ? 0 : -(offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.0048 - 8}`}}>
                             <h1 className='title'>Javascript</h1>
                             <span className='underline' />
                             <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p>
