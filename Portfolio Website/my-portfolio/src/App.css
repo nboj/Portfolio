@@ -1,11 +1,10 @@
- 
-
 .App {
   text-align: center;   
 }   
 
 * {
-  overflow: overlay;
+  overflow: overlay;  
+  scroll-behavior: smooth;
 }
 
 .App-header { 
