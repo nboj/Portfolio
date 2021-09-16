@@ -21,7 +21,7 @@ const UnityPage = (props) => {
              <div id={styles.leftSide}>  
                 <div className={styles.titleBackground} >  
                     <h1 className={styles.title} style={{
-                        transform: `skewY(${Math.pow(Math.pow(offsetY, 4), .1) / 4}deg) translateY(${-Math.pow(offsetY, 3) * 0.001 / 60}px)`,
+                        transform: `skewY(${Math.pow(Math.pow(offsetY, 4), .1) / 4}deg)`,
                         opacity: `${-Math.pow(Math.pow(offsetY, 4), .2) / 4 * 0.05 + 1 <= 0 ? 0 : -Math.pow(Math.pow(offsetY, 4), .2) / 4 * 0.05 + 1}`,
                     }}>{props.title}</h1>  
                 </div>
