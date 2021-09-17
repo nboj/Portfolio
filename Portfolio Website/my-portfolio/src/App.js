@@ -9,20 +9,20 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          <Route path='/' exact> 
-            <Home />
-          </Route>
-          <Route path='/NumberWizard' exact>
+          <Route path='/NumberWizard'>
             <NumberWizard />
           </Route>
-          <Route path='/PooperPunk' exact>
+          <Route path='/PooperPunk'>
             <PooperPunk />
           </Route>
-          <Route path='/BlockBreaker' exact>
+          <Route path='/BlockBreaker'>
             <BlockBreaker />
           </Route>
-          <Route path='/Platformer' exact>
+          <Route path='/Platformer'>
             <Platformer />
+          </Route>
+          <Route path='*'> 
+            <Home />
           </Route>
         </Switch> 
       </div>
