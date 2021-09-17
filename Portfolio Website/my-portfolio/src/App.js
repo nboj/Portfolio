@@ -21,9 +21,7 @@ const App = () => {
           <Route path='/Platformer'>
             <Platformer />
           </Route>
-          <Route path='*'> 
-            <Home />
-          </Route>
+          <Route component={Home}/>
         </Switch> 
       </div>
     </Router>
