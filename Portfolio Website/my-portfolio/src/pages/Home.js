@@ -79,25 +79,25 @@ function Home() {
       <div id='java'>
         <h1 id='title'>Java</h1>
         <section>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
+          <p>Im struggling to figure out what to put here...</p>
+          <p>Im struggling to figure out what to put here...</p>
+          <p>Im struggling to figure out what to put here...</p>
+          <p>Im struggling to figure out what to put here...</p>
+          <p>Im struggling to figure out what to put here...</p>
+          <p>Im struggling to figure out what to put here...</p>
+          <p>Im struggling to figure out what to put here...</p>
         </section>
       </div>
       <div id='cSharp'>
         <h1 id='title'>C#</h1>
         <section>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
-          <p>SAMPLE TEXT</p>
+          <p>Im struggling to figure out what to put here...</p>
+          <p>Im struggling to figure out what to put here...</p>
+          <p>Im struggling to figure out what to put here...</p>
+          <p>Im struggling to figure out what to put here...</p>
+          <p>Im struggling to figure out what to put here...</p>
+          <p>Im struggling to figure out what to put here...</p>
+          <p>Im struggling to figure out what to put here...</p>
         </section>
       </div>
     </div> 

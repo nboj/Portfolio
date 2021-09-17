@@ -25,17 +25,17 @@ const Web = () => {
                         <div style={{transform: `translateX(${(offsetY * 0.09 - 170) >= 0 || (offsetY - 1504) < 0 ? 0 : (offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.0048 - 8}`}}>
                             <h1 className='title'>Html</h1>
                             <span className='underline' /> 
-                            <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p> 
+                            <p>Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman.</p> 
                         </div>
                         <div style={{transform: `translateY(${(offsetY * 0.09 - 170) >= 0 || (offsetY - 1504) < 0 ? 0 : (offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.0048 - 8}`}}>
                             <h1 className='title'>Css</h1>
                             <span className='underline' />
-                            <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p>
+                            <p>Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman.</p>
                         </div>
                         <div style={{transform: `translateX(${-(offsetY * 0.09 - 170) <= 0 || (offsetY - 1504) < 0 ? 0 : -(offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.0048 - 8}`}}>
                             <h1 className='title'>Javascript</h1>
                             <span className='underline' />
-                            <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p>
+                            <p>Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman.</p>
                         </div>  
                     </div>
                 </div> 
@@ -48,17 +48,17 @@ const Web = () => {
                         <div style={{transform: `translateX(${(offsetY * 0.09 - 300) >= 0 || (offsetY -2960) < 0 ? 0 : (offsetY * 0.09 - 300)}px)`, opacity: `${offsetY * 0.0048 - 14.87}`}}> 
                             <h1 className='title'>Html</h1>
                             <span className='underline' /> 
-                            <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p> 
+                            <p>Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman.</p> 
                         </div>
                         <div style={{transform: `translateY(${(offsetY * 0.09 - 300) >= 0 || (offsetY -2960) < 0 ? 0 : (offsetY * 0.09 - 300)}px)`, opacity: `${offsetY * 0.0048 - 14.87}`}}>
                             <h1 className='title'>Css</h1>
                             <span className='underline' />
-                            <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p>
+                            <p>Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman.</p>
                         </div>
                         <div style={{transform: `translateX(${-(offsetY * 0.09 - 300) <= 0 || offsetY -2960 < 0 ? 0 : -(offsetY * 0.09 - 300)}px)`, opacity: `${offsetY * 0.0048 - 14.87}`}}>
                             <h1 className='title'>Javascript</h1>
                             <span className='underline' />
-                            <p>Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. Sample text.</p>
+                            <p>Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman.</p>
                         </div>   
                     </div>
             </div>
