@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';  
 import Home from './pages/Home'; 
-import UnityLinks, { NumberWizard, PooperPunk, BlockBreaker, Platformer } from './pages/UnityLinks';
-import $ from 'jquery'; 
+import UnityLinks, { PooperPunk, BlockBreaker, Platformer, NumberWizard } from './pages/UnityLinks'; 
 
 const App = () => { 
-  return (  
+  return (   
     <Router>
       <div>
         <Switch>
@@ -24,7 +23,7 @@ const App = () => {
           <Route component={Home}/>
         </Switch> 
       </div>
-    </Router>
+    </Router> 
   );
 }
 

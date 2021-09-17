@@ -61,10 +61,10 @@ function Home() {
     <div id='html' className='app'>  
       <nav>
         <ul className='navOptions'>
-          <li><a onClick={() => {scroll.scrollTo($('#cSharp').position().top)}} href='#cSharp'>C#</a></li>
-          <li><a onClick={() => {scroll.scrollTo($('#java').position().top)}} href='#java'>Java</a></li>
-          <li><a onClick={() => {scroll.scrollTo($('#web').position().top)}} href='#web'>Web</a></li>
-          <li><a onClick={() => {scroll.scrollTo($('#unity').position().top)}} href='#unity'>Unity</a></li>
+          <li><a onClick={() => {scroll.scrollTo($('#cSharp').position().top)}}>C#</a></li>
+          <li><a onClick={() => {scroll.scrollTo($('#java').position().top)}}>Java</a></li>
+          <li><a onClick={() => {scroll.scrollTo($('#web').position().top)}}>Web</a></li>
+          <li><a onClick={() => {scroll.scrollTo($('#unity').position().top)}}>Unity</a></li>
         </ul>
       </nav> 
       <button className='scrollToTop' onClick={scrollToTop}>△</button>

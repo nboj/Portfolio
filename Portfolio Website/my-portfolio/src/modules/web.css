@@ -3,13 +3,13 @@ div >* {
 } 
 
 div#web {  
-    position: relative;    
+    position: relative;  
     background: linear-gradient(#99e2b4 20%, #88d4ab, #78c6a3, #67b99a, #56ab91, #469d89, #358f80, #248277);
     padding: 20px 0 200px 0;
     color: white;  
 }  
 
-div#web:after {    
+div#web:after {   
     position: absolute;
     content: '';
     width: 100%;
@@ -22,7 +22,7 @@ div#web:after {
     transform-origin: top right;
     transform: skewY(5deg);
     z-index: -1;
-} 
+}  
 
 #web #title {
     margin: 100px 0 0 0;
@@ -78,12 +78,16 @@ div#web:after {
     padding-top: 0px;
 } 
 
-.reactLogo {
+.reactLogo { 
     position: relative;    
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
     padding: 0;  
+}
+
+#iconContainer {
+    overflow-x: clip;
 }
 
 #web .title {
