@@ -1,12 +1,12 @@
 import React from 'react';
-import { Route } from 'react-router-dom';  
+import { Route, Switch} from 'react-router-dom';  
 import Home from './pages/Home'; 
 import UnityLinks, { NumberWizard, PooperPunk, BlockBreaker, Platformer } from './pages/UnityLinks';
 import $ from 'jquery'; 
 
 const App = () => { 
-  return ( 
-    <div>
+  return (  
+    <Switch>
       <Route exact path='/'> 
         <Home />
       </Route>
@@ -22,7 +22,7 @@ const App = () => {
       <Route path='/Platformer'>
         <Platformer />
       </Route>
-    </div>
+    </Switch> 
   );
 }
 
