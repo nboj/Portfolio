@@ -12,16 +12,16 @@ const App = () => {
           <Route path='/' exact> 
             <Home />
           </Route>
-          <Route path='/NumberWizard'>
+          <Route path='/NumberWizard' exact>
             <NumberWizard />
           </Route>
-          <Route path='/PooperPunk'>
+          <Route path='/PooperPunk' exact>
             <PooperPunk />
           </Route>
-          <Route path='/BlockBreaker'>
+          <Route path='/BlockBreaker' exact>
             <BlockBreaker />
           </Route>
-          <Route path='/Platformer'>
+          <Route path='/Platformer' exact>
             <Platformer />
           </Route>
         </Switch> 
