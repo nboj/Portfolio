@@ -54,6 +54,9 @@ function Home() {
     }, a);    
     return () => clearInterval(interval);
   });  
+  const scrollTo = (position) => {
+    scroll.scrollTo(position);
+  };
   return ( 
     <div id='html' className='app'>  
       <nav>
@@ -71,7 +74,7 @@ function Home() {
           <p>{date.getFullYear() - 2003 - (date.getMonth() < 8 ? 1 : 0)} years old, computer scientist{text}</p>
         </div>
       </header>  
-      <Unity />
+      <span id='#unity'><Unity/></span>
       <Web />
       <div id='java'>
         <h1 id='title'>Java</h1>

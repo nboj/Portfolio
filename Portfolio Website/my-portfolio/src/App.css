@@ -3,8 +3,7 @@
 }   
 
 * {
-  overflow: overlay;  
-  scroll-behavior: smooth;
+  overflow: overlay;   
 }
 
 .App-header { 
