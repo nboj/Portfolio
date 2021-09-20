@@ -1,18 +1,18 @@
 .javaTitle {
     display: inline-block; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url(https://4.bp.blogspot.com/-xNYMZ8TFc5M/UOXJdrQQxjI/AAAAAAAAFWk/4IZ4pLuqsXg/s1600/2013_01_02_Good+Fortune,+800,13001.JPG);
+    background-image: url(http://images.freecreatives.com/wp-content/uploads/2016/02/Free-Vector-Black-Pattern.jpg);
     background-clip: text;
     -webkit-text-fill-color: transparent;  
     background-size: cover;
     background-position: center, center;
     font-size: 400px;
-    padding: 0;
+    padding: 100px 0 0 0;
     margin: 0;
-    text-align: center;     
+    text-align: center;    
 }
 
-#titleContainer {
+#titleContainer { 
     display: block;
     width: fit-content;
     margin: 0 auto;
