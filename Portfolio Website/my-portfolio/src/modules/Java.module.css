@@ -1,8 +1,22 @@
-#javaTitle {
+.javaTitle {
+    display: inline-block; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(https://4.bp.blogspot.com/-xNYMZ8TFc5M/UOXJdrQQxjI/AAAAAAAAFWk/4IZ4pLuqsXg/s1600/2013_01_02_Good+Fortune,+800,13001.JPG);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    background-size: cover;
+    background-position: center, center;
     font-size: 400px;
     padding: 0;
     margin: 0;
     text-align: center;  
-    opacity: .8; 
-    
+    opacity: .8;     
+    filter: drop-shadow(20px 10px 4px rgb(56, 47, 32));
+    transition: 0.2s cubic-bezier(0.070, 0.615, 0.000, 0.980);
 }
+
+#titleContainer {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+} 
