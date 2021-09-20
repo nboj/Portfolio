@@ -4,6 +4,7 @@ import $ from 'jquery';
 import { animateScroll as scroll} from 'react-scroll';
 import Unity from '../modules/unity';
 import Web from '../modules/web';
+import Java from '../modules/Java';
 
 const date = new Date();
 let i = 0;  
@@ -74,20 +75,9 @@ function Home() {
           <p>{date.getFullYear() - 2003 - (date.getMonth() < 8 ? 1 : 0)} years old, computer scientist{text}</p>
         </div>
       </header>  
-      <span><Unity/></span>
+      <Unity/>
       <Web />
-      <div id='java'>
-        <h1 id='title'>Java</h1>
-        <section>
-          <p>Im struggling to figure out what to put here...</p>
-          <p>Im struggling to figure out what to put here...</p>
-          <p>Im struggling to figure out what to put here...</p>
-          <p>Im struggling to figure out what to put here...</p>
-          <p>Im struggling to figure out what to put here...</p>
-          <p>Im struggling to figure out what to put here...</p>
-          <p>Im struggling to figure out what to put here...</p>
-        </section>
-      </div>
+      <Java />
       <div id='cSharp'>
         <h1 id='title'>C#</h1>
         <section>
