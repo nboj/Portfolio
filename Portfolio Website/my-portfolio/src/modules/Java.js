@@ -11,12 +11,20 @@ const Java = () => {
         return () => window.removeEventListener('scroll', scrollHandler);
     }, []);
     return(
-        <div id='java'>
+        <div id='java' className={styles.java}>
             <div id={styles.titleContainer}>
-                <h1 className={styles.javaTitle} style={{transform: `translateX(${(offsetY - 4400) * 0.1 > 0 ? 0 : (offsetY - 4400) * 0.1}px)`}}>J</h1>
-                <h1 className={styles.javaTitle} style={{transform: `translateY(${(offsetY - 4400) * 0.1 > 0 ? 0 : (offsetY - 4400) * 0.1}px)`}}>a</h1>
-                <h1 className={styles.javaTitle} style={{transform: `translateY(${(offsetY - 4400) * -0.1 < 0 ? 0 : (offsetY - 4400) * -0.1}px)`}}>v</h1>
-                <h1 className={styles.javaTitle} style={{transform: `translateX(${(offsetY - 4400) * -0.1 < 0 ? 0 : (offsetY - 4400) * -0.1}px)`}}>a</h1>
+                <h1 className={styles.javaTitle} style={{
+                    transform: `translateX(${(offsetY - 4400) * 0.1 > 0 ? 0 : (offsetY - 4400) * 0.1}px)`, 
+                    filter: `drop-shadow(${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px ${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px 5px rgba(180, 129, 20, 0.8))`}}>J</h1>
+                <h1 className={styles.javaTitle} style={{
+                    transform: `translateY(${(offsetY - 4400) * 0.1 > 0 ? 0 : (offsetY - 4400) * 0.1}px)`, 
+                    filter: `drop-shadow(${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px ${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px 5px rgba(180, 129, 20, 0.8))`}}>a</h1>
+                <h1 className={styles.javaTitle} style={{
+                    transform: `translateY(${(offsetY - 4400) * -0.1 < 0 ? 0 : (offsetY - 4400) * -0.1}px)`, 
+                    filter: `drop-shadow(${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px ${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px 5px rgba(180, 129, 20, 0.8))`}}>v</h1>
+                <h1 className={styles.javaTitle} style={{
+                    transform: `translateX(${(offsetY - 4400) * -0.1 < 0 ? 0 : (offsetY - 4400) * -0.1}px)`, 
+                    filter: `drop-shadow(${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px ${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px 5px rgba(180, 129, 20, 0.8))`}}>a</h1>
             </div>
             <section>
                 <p>Im struggling to figure out what to put here...</p>
