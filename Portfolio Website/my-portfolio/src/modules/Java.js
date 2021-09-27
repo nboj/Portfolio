@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Java.module.css'; 
+import Popup from './Popup';
+import $ from 'jquery';
+import popupStyles from './Popup.module.css';
 
 const Java = () => {
     const offset = 4400;
@@ -25,6 +28,13 @@ const Java = () => {
         window.addEventListener('scroll', scrollHandler);
         return () => window.removeEventListener('scroll', scrollHandler);
     }, []);
+    const [on, setOn] = useState(false);
+    const handleClose = () => {
+        $('#' + popupStyles.box).animate({height: '0'}, 'swing');
+        setTimeout(() => {
+            setOn(false);
+        }, 400);
+    }
     return(
         <div id='java'> 
             <img id={styles.clouds} style={{transform: `translateY(${((offsetY) * -0.09) * 100 / window.innerWidth}vw)`}}/> 
@@ -68,7 +78,11 @@ const Java = () => {
             <span id={styles.grass}></span>
             <div id={styles.dirt}>  
                 <div id={styles.caveImg1}>  
-                    <img id={styles.trophyImg} /> 
+                    <img id={styles.trophyImg} onClick={() => {
+                        $('#' + popupStyles.box).animate({height: '50%'}, 500, 'swing'); 
+                        setOn(true);
+                    }}/> 
+                    <Popup content='Hello there!' display={on ? 'block' : 'none'} handleClose={handleClose}/>
                 </div> 
             </div>
         </div>

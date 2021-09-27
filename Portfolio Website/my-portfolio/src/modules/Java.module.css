@@ -159,7 +159,7 @@ div.java {
 
 #steveBody { 
     position: absolute;
-    z-index: 9;  
+    z-index: 1;  
     width: 11.7vw;
     height: 22.3vw;
     left: 15.625vw; 
