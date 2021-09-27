@@ -5,7 +5,10 @@ const Popup = (props) => {
     return(
         <div style={{display: props.display}} id={styles.popupBox}>
             <div id={styles.box}> 
-                <span id={styles.close} onClick={props.handleClose}>X</span>
+                <div id={styles.close} onClick={props.handleClose}>
+                    <span id={styles.line1}>|</span>
+                    <span id={styles.line2}>|</span>
+                </div>
                 {props.content}
             </div>
         </div>

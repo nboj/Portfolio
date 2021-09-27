@@ -275,11 +275,12 @@ div.java {
     width: 20.84vw;
     left: 60%; 
     top: 8.91vw;    
-    transition: .5s width ease-out, .5s top ease-out, .2s filter ease-in; 
+    transition: .5s width ease-out, .5s top ease-out; 
 }
 
 #trophyImg:hover { 
+    cursor: pointer;
     width: 21.3542vw;
     top: 8.125vw;
-    filter: blur(0) drop-shadow(1px 0px 0px yellow) drop-shadow(-1px 0px 0px yellow) drop-shadow(0px 1px 0px yellow) drop-shadow(0px -1px 0px yellow);  
+    filter: drop-shadow(1px 0px 0px yellow) drop-shadow(-1px 0px 0px yellow) drop-shadow(0px 1px 0px yellow) drop-shadow(0px -1px 0px yellow);  
 } 
