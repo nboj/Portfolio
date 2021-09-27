@@ -70,12 +70,12 @@
 }    
 
 ::-webkit-scrollbar {  
-  width: 12px;   
+  width: 8px;    
 }  
 
 ::-webkit-scrollbar-thumb { 
   background: #0d47a1; 
-  border-radius: 2px; 
+  border-radius: 20px;  
  }  
 
 #title {

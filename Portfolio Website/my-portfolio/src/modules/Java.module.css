@@ -1,19 +1,285 @@
+@import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
+
+div.java {   
+    margin: 0;
+    padding: 0;
+}  
+
+#backgroundImg {
+    content: url(../images/MinecraftBackground.jpg);
+    position: relative;   
+    aspect-ratio: 1920 / 1080;
+    display: block; 
+    margin: 0;   
+}
+
+#backgroundImg >*{
+    
+    overflow: visible;
+}
+
 .javaTitle {
     display: inline-block; 
+    position: relative;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-image: url(http://images.freecreatives.com/wp-content/uploads/2016/02/Free-Vector-Black-Pattern.jpg);
     background-clip: text;
     -webkit-text-fill-color: transparent;  
     background-size: cover;
     background-position: center, center;
-    font-size: 400px;
-    padding: 100px 0 0 0;
+    font-size: 20.84vw;
+    padding: 0;
     margin: 0;
     text-align: center;    
+    transition: 0.1s ease-out;
 }
 
 #titleContainer { 
+    position: relative; 
     display: block;
+    z-index: 1;
     width: fit-content;
     margin: 0 auto;
 }  
+
+#javaTitleContainer {
+    position: absolute;
+    width: 100%;
+}
+
+.javaImg { 
+    position: absolute;   
+    z-index: 1;
+}
+
+.javaImg.one { 
+    right: 2.6041vw;  
+    width: 15.625vw; 
+}
+
+.javaImg.two {       
+    left: 3.125vw; 
+    width: 15.625vw; 
+} 
+
+#blur {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    margin: 0;
+    padding: 0;
+}
+
+#clouds {   
+    content: url(../images/clouds.png);
+    animation-name: float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    display: block;
+    position: absolute; 
+    background-position: center;
+    background-size: cover;
+    width: 27.042vw;
+    height: 14.021vw; 
+    opacity: 0.7;
+    border: none;  
+}
+
+
+@keyframes float {
+    0% {
+        left: 1vw;
+    }
+    
+    100% { 
+        left: 70vw;
+    }
+}
+
+#dirt {
+    position: relative; 
+    background: url('https://th.bing.com/th/id/R.02cd2a59a5bb6b02e54c6267dfd2af07?rik=iRMhSOjSPdg%2bEA&riu=http%3a%2f%2f3.bp.blogspot.com%2f-Qs0ZbaSy4KM%2fT6AuMiorc6I%2fAAAAAAAABOc%2fRpA3dZGicC8%2fs1600%2fminecraft_dirt.jpg&ehk=JryviKbuYAEGL8bIGd20ElcOVajk0DWd3LDg90fLKGk%3d&risl=&pid=ImgRaw&r=0');
+    background-size: 7.8125vw; 
+    padding: 10rem 0;
+    height: 100.7vw;
+    border-bottom-left-radius: 0.52vw;    
+    border-bottom-right-radius: 0.52vw;    
+}
+
+#dirt >* {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    display: block;
+    position: relative;
+    text-align: center;
+    background: #212529;
+    color: white;
+    border-radius: 8px;  
+    z-index: 1;
+    padding: 0;
+    margin: 0; 
+    box-shadow: inset 1px 1px 0 rgb(0 0 0 / 10%), inset 0 -1px 0 rgb(0 0 0 / 7%); 
+}
+
+#grass {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background: url(../images/dirt.png); 
+    background-size: 7.8vw;  
+    width: 100%; 
+    height: 7.8vw; 
+    clip-path: inset(0 0 1px 0);
+    padding: 0;
+    margin: 0;
+}
+
+#cloudsContainer {
+    overflow: hidden;
+}   
+
+#blocks {  
+    margin: 0 auto;
+    background: none;
+    box-shadow: none;
+    border: none;
+} 
+
+#blocks >* {
+    width: 25vw;
+    display: inline-block;
+    margin: 1.2vw .3vw 0 .3vw;
+    background: #212529;
+    color: white;
+    border-radius: 0.417vw;    
+    box-shadow: inset 1px 1px 0 rgb(0 0 0 / 10%), inset 0 -1px 0 rgb(0 0 0 / 7%); 
+    padding: 8vw .3vw; 
+} 
+
+#steveBody { 
+    position: absolute;
+    z-index: 9;  
+    width: 11.7vw;
+    height: 22.3vw;
+    left: 15.625vw; 
+    transition: 0.2s ease-out; 
+}
+
+#steveBody >* {
+    display: block;
+    position: relative;
+    background-repeat: no-repeat; 
+    transition: 0.2s ease-out;
+}
+
+#steveHead { 
+    background: url(../images/SteveHead.png); 
+    background-size: 5.4vw;
+    width: 5.4vw;
+    height: 5.6vw;
+    left: -2.8vw;
+    top: 0.52vw;
+}
+
+#steveArm1 { 
+    position: relative;
+    background: url(../images/SteveArm.png);
+    background-size: 2.9vw;
+    width: 2.91vw;
+    height: 8.541vw;
+    left: -1.458vw;   
+    z-index: 1;
+}
+
+#steveArm2 { 
+    position: relative; 
+    background: url(../images/SteveArm.png);
+    background-size: 2.9vw;
+    width: 2.91vw;
+    height: 8.541vw; 
+    top: -8.541vw;
+    left: -1.458vw;   
+    z-index: -1;
+}
+
+#steveTorso { 
+    background: url(../images/SteveTorso.png);
+    background-size: 2.8125vw;
+    width: 2.8125vw;
+    height: 8.541vw;
+    left: -1.458vw;  
+}
+
+#steveLeg1 {
+    position: relative;
+    background: url(../images/SteveLeg.png);
+    background-size: 2.76vw;
+    width: 2.76vw;
+    height: 7.92vw;
+    left: -1.3vw; 
+    top: -0.52vw;
+    z-index: -1;
+}
+
+#steveLeg2 {
+    position: relative;
+    background: url(../images/SteveLeg.png);
+    background-size: 2.76vw;
+    width: 2.76vw;
+    height: 7.92vw;
+    left: -1.3vw; 
+    top: -0.52vw;
+    z-index: -1;
+}
+
+#stevePickaxe {
+    position: relative;
+    display: block; 
+    background: url(../images/StevePickaxe.png);
+    background-repeat: no-repeat;  
+    background-size: 6.9vw;
+    width: 6.9vw;
+    height: 6.72vw;
+    left: 2.865vw;
+    top: 2.6vw;
+}
+
+#armContainer {
+    position: absolute;
+} 
+
+#armContainer >* { 
+    display: block;
+    transition: 0.2s ease-out;
+}
+
+#caveImg1 {
+    display: block;
+    position: relative; 
+    background-image: url(../images/EditedRenderedWall.png);
+    aspect-ratio: 1727 / 921;
+    background-size: 71.875vw;  
+    background-color: transparent; 
+    width: 71.875vw;
+    margin: auto;
+    top: 10.68vw;   
+    border-radius: 0;  
+}
+
+#trophyImg {
+    display: block;  
+    position: relative;
+    content: url(../images/Trophy.png); 
+    aspect-ratio: 1512 / 2016;
+    width: 20.84vw;
+    left: 60%; 
+    top: 8.91vw;    
+    transition: .5s width ease-out, .5s top ease-out, .2s filter ease-in; 
+}
+
+#trophyImg:hover { 
+    width: 21.3542vw;
+    top: 8.125vw;
+    filter: blur(0) drop-shadow(1px 0px 0px yellow) drop-shadow(-1px 0px 0px yellow) drop-shadow(0px 1px 0px yellow) drop-shadow(0px -1px 0px yellow);  
+} 

@@ -9,10 +9,9 @@ import Java from '../modules/Java';
 const date = new Date();
 let i = 0;  
 let a = 1100;   
-function ForwardsLoop(word, text, setText) {
-  if (!$('header.App-header div').is(':visible')) { 
-    return;
-  }
+const offset = 450;
+let on = true;
+function ForwardsLoop(word, text, setText) { 
   setTimeout(() => {  
     setText(word.substring(0, i));
     i++;
@@ -23,10 +22,7 @@ function ForwardsLoop(word, text, setText) {
     }
   }, 100);
 } 
-function BackwardsLoop(word, text, setText) {
-  if (!$('header.App-header div').is(':visible')) { 
-    return;
-  }
+function BackwardsLoop(word, text, setText) { 
   setTimeout(() => {  
     setText(word.substring(0, i));
     i--;
@@ -45,19 +41,25 @@ function Home() {
   const [text, setText] = useState(""); 
   const texts = [", pet lover...", ", game developer...", ", gamer...", ", varcity soccer player..."]
   useEffect(() => { 
+    window.onblur = () => {
+      on = false;
+    }
+
+    window.onfocus = () => {
+      on = true;
+    }
     let word = "";
     const interval = setInterval(() => {
-      word = texts[index]; 
-      ForwardsLoop(word, text, setText);  
-      index = index >= texts.length - 1 ? index = 0 : index + 1;  
-      a = word.length * 125; 
-      i = 0;
+      if (window.scrollY < offset && on) {  
+        word = texts[index]; 
+        ForwardsLoop(word, text, setText);  
+        index = index >= texts.length - 1 ? index = 0 : index + 1;  
+        a = word.length * 125; 
+        i = 0;
+      }
     }, a);    
     return () => clearInterval(interval);
-  });  
-  const scrollTo = (position) => {
-    scroll.scrollTo(position);
-  };
+  });   
   return ( 
     <div id='html' className='app'>  
       <nav>

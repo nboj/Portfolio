@@ -39,9 +39,9 @@ const Web = () => {
                         </div>  
                     </div>
                 </div> 
-                <img id='transitionImg' />
+                <div id='transitionImg' style={{backgroundPositionX: `${offsetY * 0.2}px`}} />
                 <div id='iconContainer'>
-                    <img src='https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png' width='400px' className='reactLogo' style={{transform: `translateX(${(offsetY - 2300) < offsetY && offsetY < 4070 ? (offsetY - 2300) * 0.5 - 450 : 0}px) rotate(${offsetY * 0.1}deg)`}}/>
+                    <img src='https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png' className='reactLogo' style={{transform: `translateX(${(offsetY - 2300) < offsetY && offsetY < 4070 ? (offsetY - 2300) * -0.5 : 0}px) rotate(${-offsetY * 0.2}deg)`}}/>
                 </div>
             </div> 
             <div id='react'>

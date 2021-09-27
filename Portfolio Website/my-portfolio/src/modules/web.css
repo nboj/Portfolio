@@ -1,3 +1,7 @@
+div { 
+    overflow: visible;
+} 
+
 div >* { 
     overflow: visible;
 } 
@@ -5,7 +9,7 @@ div >* {
 div#web {  
     position: relative;  
     background: linear-gradient(#99e2b4 20%, #88d4ab, #78c6a3, #67b99a, #56ab91, #469d89, #358f80, #248277);
-    padding: 20px 0 200px 0;
+    padding: 20px 0 10.417vw 0;
     color: white;  
 }  
 
@@ -34,7 +38,7 @@ div#web:after {
     flex-direction: row; 
     flex-flow: wrap;
     justify-content: center;
-    padding: 200px 0 100px 0;
+    padding: 10.417vw 0 5.208vw 0;
     background-size: cover;
     background-position: center center;
     ;   
@@ -67,10 +71,11 @@ div#web:after {
 
 #react {  
     position: relative; 
-    color: white;  
-    background: linear-gradient(to bottom, #1565c0, #1976d2, #1e88e5, #2196f3, #42a5f5, #64b5f6, #90caf9, #bbdefb);
+    color: white;  /* #82acfe */
+    /* background: linear-gradient(to bottom, #1565c0, #1976d2, #1e88e5, #2196f3, #42a5f5, #64b5f6, #90caf9, #bbdefb); */
+    background: linear-gradient(to bottom, #1565c0, #1976d2, #1e88e5, #2196f3, #42a5f5, #64b5f6, #78aedd, #78aedd);
     background-position: center, center;
-    background-size: cover;
+    background-size: cover; 
 }  
 
 #react h1 {
@@ -82,6 +87,7 @@ div#web:after {
     position: relative;    
     left: 50%;
     transform: translateX(-50%);
+    width: 20.83vw;
     margin: 0;
     padding: 0;  
 }
@@ -118,10 +124,9 @@ div#web:after {
     flex-direction: row; 
     flex-flow: wrap;
     justify-content: center;
-    padding: 0 0 300px 0;
+    padding: 0 0 15.625vw 0;
     background-size: cover;
-    background-position: center center;
-    ;   
+    background-position: center center; 
     width: 100%;
     height: 100%;   
 }   
@@ -144,14 +149,13 @@ div#web:after {
     display: block;
     position: absolute;
     bottom: 0px;
-    border: none;
-    clip-path: inset(2px 1px 1px 1px);  
-    background-image: url('../images/BetterSplash.png');
-    background-position: bottom, center;
-    background-size: cover;
+    border: none; 
+    background-image: url('../images//BlueSplash2.png');  
+    background-position-y: bottom;
+    background-size: 98.4375vw;
     width: 100%; 
-    margin-bottom: -2px;
+    margin-bottom: -0.10416666666666667vw;
     padding: 0;
-    height: 500px; 
+    height: 26.042vw;  
 }
  
