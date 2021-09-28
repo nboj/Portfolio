@@ -28,12 +28,13 @@
     background: white;
     opacity: 0; 
     padding: 10px;    
-}
+} 
 
 #close {  
     overflow: none;
     display: block;
     position: absolute; 
+    user-select: none;
     cursor: pointer;
     top: 0;
     right: 0px; 
@@ -44,6 +45,129 @@
     border-radius: 100%;
     transition: 0.2s;
 } 
+ 
+
+.letters {    
+    position: absolute;
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 40px;
+    stroke-dashoffset: 0; 
+    transform-origin: center;
+    transform: scale(.5); 
+}
+
+#c1 {
+    stroke-dasharray: 300px;
+    animation: c1 1s ease forwards alternate-reverse;
+}
+
+#c2 {
+    stroke-dasharray: 145px;
+    animation: c2 1s ease-out forwards alternate-reverse;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+#c3 {
+    stroke-dasharray: 145px;
+    animation: c3 0.5s ease-out forwards alternate-reverse; 
+}
+
+#a1 {
+    stroke-dasharray: 270px;
+    animation: a1 1s ease forwards alternate-reverse; 
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+#a2 {
+    stroke-dasharray: 300px; 
+    animation: a2 1s ease forwards alternate-reverse; 
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+#a3 {
+    stroke-dasharray: 270px;   
+    animation: a3 1s ease forwards alternate-reverse;  
+    animation-delay: 0.2s; 
+    opacity: 0;
+}
+
+@keyframes c1 {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -300px; 
+    }
+}
+
+
+@keyframes c2 {
+    0% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    100% {
+        stroke-dashoffset: -145; 
+        opacity: 1;
+    }
+}
+
+
+@keyframes c3 {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -145; 
+    }
+}
+
+@keyframes a1 {
+    0% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    100% {
+        stroke-dashoffset: -270; 
+        opacity: 1;
+    }
+} 
+
+
+@keyframes a2 {
+    0% {
+        stroke-dashoffset: 0;  
+        opacity: 1;
+    }
+
+    100% {
+        stroke-dashoffset: -300;   
+        opacity: 1;
+    }
+}
+
+@keyframes a3 {
+    0% {
+        stroke-dashoffset: 0; 
+        opacity: 1;
+    }
+    
+    100% {
+        stroke-dashoffset: -270;   
+        opacity: 1;
+    }
+}
+
+
 
 #close::after {
     content: '';
