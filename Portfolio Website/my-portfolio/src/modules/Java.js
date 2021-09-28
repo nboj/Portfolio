@@ -93,8 +93,8 @@ const Java = () => {
                                 <line class={popupStyles.letters} id={popupStyles.c2} x1="0.28" y1="36.2" x2="141.66" y2="36.2"/>
                                 <line class={popupStyles.letters} id={popupStyles.c3} y1="252.62" x2="141.37" y2="252.62"/>
                                 <line class={popupStyles.letters} id={popupStyles.a1} x1="273.94" y1="19.44" x2="194.49" y2="273.36"/>
-                                <line class={popupStyles.letters} id={popupStyles.a2} x1="273.66" y1="6.73" x2="368.09" y2="270.8"/>
                                 <line class={popupStyles.letters} id={popupStyles.a3} x1="332.16" y1="170.31" x2="226.81" y2="170.04"/> 
+                                <line class={popupStyles.letters} id={popupStyles.a2} x1="273.66" y1="6.73" x2="368.09" y2="270.8"/>
                             </svg>
                         </div>
                     } display={on ? 'block' : 'none'} handleClose={handleClose}/>

@@ -61,17 +61,18 @@
 #c1 {
     stroke-dasharray: 300px;
     animation: c1 1s ease forwards alternate-reverse;
+    stroke: tomato;
 }
 
 #c2 {
     stroke-dasharray: 145px;
-    animation: c2 1s ease-out forwards alternate-reverse;
+    animation: c2 1s ease-out forwards alternate-reverse; 
     animation-delay: 0.2s;
     opacity: 0;
 }
 
 #c3 {
-    stroke-dasharray: 145px;
+    stroke-dasharray: 145px; 
     animation: c3 0.5s ease-out forwards alternate-reverse; 
 }
 
@@ -87,6 +88,7 @@
     animation: a2 1s ease forwards alternate-reverse; 
     animation-delay: 0.2s;
     opacity: 0;
+    stroke: tomato; 
 }
 
 #a3 {
@@ -146,10 +148,10 @@
 @keyframes a2 {
     0% {
         stroke-dashoffset: 0;  
-        opacity: 1;
+        opacity: 1; 
     }
-
-    100% {
+    
+    100% { 
         stroke-dashoffset: -300;   
         opacity: 1;
     }
