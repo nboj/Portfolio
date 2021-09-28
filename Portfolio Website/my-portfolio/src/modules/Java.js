@@ -30,10 +30,10 @@ const Java = () => {
     }, []);
     const [on, setOn] = useState(false);
     const handleClose = () => {
-        $('#' + popupStyles.box).animate({height: '0'}, 'swing');
+        $('#' + popupStyles.box).animate({height: '0'}, 200, 'swing');
         setTimeout(() => {
             setOn(false);
-        }, 400);
+        }, 200);
     }
     return(
         <div id='java'> 
@@ -79,7 +79,7 @@ const Java = () => {
             <div id={styles.dirt}>  
                 <div id={styles.caveImg1}>  
                     <img id={styles.trophyImg} onClick={() => {
-                        $('#' + popupStyles.box).animate({height: '50%'}, 500, 'swing'); 
+                        $('#' + popupStyles.box).animate({height: '50%'}, 200, 'swing'); 
                         setOn(true);
                     }}/> 
                     <Popup content='Hello there!' display={on ? 'block' : 'none'} handleClose={handleClose}/>
