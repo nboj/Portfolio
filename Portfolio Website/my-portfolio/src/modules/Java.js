@@ -82,9 +82,9 @@ const Java = () => {
                         $('#' + popupStyles.box).animate({height: '50%', opacity: '1'}, 200, 'swing');  
                         setOn(true);
                     }}/> 
-                    <Popup content={
+                    <Popup content={ 
                         <div>
-                            Hello there!
+                            Hello There!
                         </div>
                     } display={on ? 'block' : 'none'} handleClose={handleClose}/>
                 </div> 
