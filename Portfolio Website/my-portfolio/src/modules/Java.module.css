@@ -275,7 +275,7 @@ div.java {
     width: 20.84vw;
     left: 60%; 
     top: 8.91vw;    
-    transition: .5s width ease-out, .5s top ease-out; 
+    transition: .2s width ease-out, .2s top ease-out; 
 }
 
 #trophyImg:hover { 
