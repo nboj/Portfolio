@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './Java.module.css'; 
 import Popup from './Popup';
 import $ from 'jquery';
-import popupStyles from './Popup.module.css';
+import popupStyles from './Popup.module.css'; 
 
 const Java = () => {
     const offset = 4400;
