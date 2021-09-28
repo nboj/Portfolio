@@ -38,7 +38,7 @@
     margin: 10px;
     border-radius: 100%;
     transition: 0.2s;
-}
+} 
 
 #line1 {
     position: absolute;
@@ -70,4 +70,4 @@
 
 #close:hover > #line2 { 
     transform: translateY(-50%) translateX(-50%) rotate(-90deg); 
-}
+} 
