@@ -343,6 +343,7 @@ div.java {
     overflow: hidden;
     position: absolute;
     display: block;
+    color: #212529;
     width: 50%;
     height: 100%;
     top: 0;

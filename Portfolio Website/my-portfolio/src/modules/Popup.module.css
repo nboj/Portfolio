@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     backdrop-filter: blur(9px);
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.113), rgba(0, 0, 0, 0.138));   
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.113), rgba(0, 0, 0, 0.138));    
 }
 
 .box {
@@ -42,7 +42,7 @@
     top: 0;
     right: 0px; 
     color: white;
-    background: black;
+    background: black; 
     padding: 15px;
     margin: 10px;
     border-radius: 100%;

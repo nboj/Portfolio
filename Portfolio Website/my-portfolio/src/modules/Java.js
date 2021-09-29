@@ -41,7 +41,7 @@ const Java = (props) => {
         handleClose();
         setTimeout(() => {
             setTrophyOn(false);
-            props.setNavOn(true);
+            props.setNav(true);
         }, 200);
     };
 
@@ -49,14 +49,14 @@ const Java = (props) => {
         handleClose();
         setTimeout(() => {
             setPlaque1On(false);
-            props.setNavOn(true);
+            props.setNav(true);
         }, 200);
     }
 
     const handleClick = () => {
         $('.' + popupStyles.box).animate({height: '50%', opacity: '1'}, 200, 'swing', ()=>{$('.' + styles.popupDescriptionContainer).css('overflow', 'auto')});    
         $('body').css('overflow', 'hidden');
-        props.setNavOn(false);
+        props.setNav(false);
     };
     return(
         <div id='java'> 

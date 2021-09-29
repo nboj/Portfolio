@@ -62,7 +62,7 @@ function Home() {
   });   
 
   const [navOn, setNavOn] = useState(true);
- 
+
   return ( 
     <div id='html' className='app'>  
       <nav style={{display: navOn ? 'block' : 'none'}}>
@@ -90,7 +90,7 @@ function Home() {
       </header>  
       <Unity/>
       <Web />
-      <Java setNavOn={setNavOn}/>
+      <Java setNav={setNavOn}/>
       <div id='cSharp'>
         <h1 id='title'>C#</h1>
         <section>

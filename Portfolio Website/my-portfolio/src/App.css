@@ -27,7 +27,7 @@ body {
   position: fixed;
   width: 100%;
   z-index: 10;
-  backdrop-filter: blur(9px);
+  backdrop-filter: blur(9px); 
 }
 
 .app ul {
