@@ -83,19 +83,8 @@ const Java = () => {
                         setOn(true);
                     }}/> 
                     <Popup content={ 
-                        <div> 
-                            {/* <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 614.72 206.35"> 
-                                <path id={popupStyles.Layer1} d="M438.65,341.57C440,329,441,314.91,433.19,304.9c-8.59-11-25.47-12.71-38.26-7.08s-22.14,16.94-29.78,28.64c-10.85,16.63-19.42,35.61-19.28,55.47s10.63,40.56,29,48.22c3.41,1.43,7.32,2.39,10.79,1.07,2.79-1.06,4.86-3.42,6.78-5.71q15.51-18.52,29.26-38.43c9.17-13.27,18-27.89,18.29-44,0-2-.12-4.13-1.35-5.71-2.52-3.23-7.68-2.12-11.24-.09-19.28,11-24.05,36.81-22.25,58.93s8.05,44.6,2.69,66.14q8.06-32.77,18.68-64.83c1.88-5.66,5.68-12.52,11.57-11.58,2.83.45,5,2.7,6.74,5,16.61,21.89,10.61,53.26,19.74,79.18a148.06,148.06,0,0,0,67.91-73c1.23-2.89,2.44-5.92,4.78-8,2.66-2.37,6.33-3.15,9.82-3.84l96.37-19a536.79,536.79,0,0,0,3.22,85.59c1.51,12.72,3.92,26.33,13,35.38,9.29,9.26,23.36,11.51,36.46,12.31,95.17,5.76,186-40.13,263.7-95.42" transform="translate(-345.36 -294.18)"/>
-                            </svg> */}
-
-                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386.93 279.33"> 
-                                <line class={popupStyles.letters} id={popupStyles.c1} x1="20.02" y1="16.31" x2="20.02" y2="242.54"/>
-                                <line class={popupStyles.letters} id={popupStyles.c2} x1="0.28" y1="36.2" x2="141.66" y2="36.2"/>
-                                <line class={popupStyles.letters} id={popupStyles.c3} y1="252.62" x2="141.37" y2="252.62"/>
-                                <line class={popupStyles.letters} id={popupStyles.a1} x1="273.94" y1="19.44" x2="194.49" y2="273.36"/>
-                                <line class={popupStyles.letters} id={popupStyles.a3} x1="332.16" y1="170.31" x2="226.81" y2="170.04"/> 
-                                <line class={popupStyles.letters} id={popupStyles.a2} x1="273.66" y1="6.73" x2="368.09" y2="270.8"/>
-                            </svg>
+                        <div>   
+                            Hello there!
                         </div>
                     } display={on ? 'block' : 'none'} handleClose={handleClose}/>
                 </div> 

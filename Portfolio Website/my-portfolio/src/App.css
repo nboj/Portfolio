@@ -127,3 +127,163 @@ body {
   background: linear-gradient(to bottom, rgba(1, 1, 1, 0.842), rgb(1, 1, 1));
   transition: 0.5s;
 }
+
+#logo1 >* {
+  transition: all 1s;
+}
+
+.letters {    
+  position: absolute;
+  display: block;  
+  fill: none;
+  stroke: #000;
+  stroke-miterlimit: 10;
+  stroke-width: 40px;
+  stroke-dashoffset: 0;  
+  transform-origin: center; 
+}
+
+#c1 {
+  stroke-dasharray: 300px;
+  animation: c1 1s ease forwards alternate-reverse;
+  stroke: #f1faee; 
+}
+
+#c2 {
+  stroke-dasharray: 145px;
+  animation: c2 1s ease-out forwards alternate-reverse; 
+  animation-delay: 0.2s;
+  opacity: 0;
+  stroke: #f1faee; 
+}
+
+#c3 {
+  stroke-dasharray: 145px; 
+  animation: c3 0.5s ease-out forwards alternate-reverse; 
+  stroke: #f1faee; 
+}
+
+#a1 {
+  stroke-dasharray: 270px;
+  animation: a1 1s ease forwards alternate-reverse; 
+  animation-delay: 0.2s;
+  opacity: 0;
+  stroke: #f1faee; 
+}
+
+#a2 {
+  stroke-dasharray: 300px; 
+  animation: a2 1s ease forwards alternate-reverse; 
+  animation-delay: 0.2s;
+  opacity: 0;
+  stroke: #f1faee; 
+}
+
+#a3 {
+  stroke-dasharray: 270px;   
+  animation: a3 1s ease forwards alternate-reverse;  
+  animation-delay: 0.2s; 
+  opacity: 0;
+  stroke: #f1faee; 
+}
+
+@keyframes c1 {
+  0% {
+      stroke-dashoffset: 0;
+  }
+
+  100% {
+      stroke-dashoffset: -300px; 
+  }
+}
+
+
+@keyframes c2 {
+  0% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+  }
+
+  100% {
+      stroke-dashoffset: -145; 
+      opacity: 1;
+  }
+}
+
+
+@keyframes c3 {
+  0% {
+      stroke-dashoffset: 0;
+  }
+
+  100% {
+      stroke-dashoffset: -145; 
+  }
+}
+
+@keyframes a1 {
+  0% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+  }
+
+  100% {
+      stroke-dashoffset: -270; 
+      opacity: 1;
+  }
+} 
+
+
+@keyframes a2 {
+  0% {
+      stroke-dashoffset: 0;  
+      opacity: 1; 
+  }
+  
+  100% { 
+      stroke-dashoffset: -300;   
+      opacity: 1;
+  }
+}
+
+@keyframes a3 {
+  0% {
+      stroke-dashoffset: 0; 
+      opacity: 1;
+  }
+  
+  100% {
+      stroke-dashoffset: -270;   
+      opacity: 1;
+  }
+}
+
+#logo1 {
+  position: absolute;
+  float: left;  
+  width: 25px;  
+  left: 20px; 
+  top: 0;
+  bottom: 0;
+  margin: auto;   
+}
+
+#logo1:hover {
+  cursor: pointer; 
+}
+
+#logo1:hover >* {
+  stroke: #06d6a0;
+}
+
+#logo1:hover #a3 {   
+  transform: rotate(-70deg) translateY(50px);
+}
+
+#logo1:hover #a1 { 
+  transform: rotate(70deg) translateY(-20px) translateX(80px);
+}
+
+#logo1:hover #a2 { 
+  transform: translateX(-200px); 
+}

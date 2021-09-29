@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react';
-import styles from './Popup.module.css';
-import $ from 'jquery';
+import styles from './Popup.module.css'; 
 
-const Popup = (props) => {
-    useEffect(() => {
-        $('#body').click(()=> {console.log('clicked')});
-    }, [])
+const Popup = (props) => { 
     return(
         <div style={{display: props.display}} id={styles.popupBox}>
             <div id={styles.box}> 
