@@ -60,9 +60,12 @@ function Home() {
     }, a);    
     return () => clearInterval(interval);
   });   
+
+  const [navOn, setNavOn] = useState(true);
+ 
   return ( 
     <div id='html' className='app'>  
-      <nav>
+      <nav style={{display: navOn ? 'block' : 'none'}}>
         <ul className='navOptions'>
           <svg id='logo1' data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386.93 279.33"  onClick={scrollToTop}> 
               <line class='letters' id='c1' x1="20.02" y1="16.31" x2="20.02" y2="242.54"/>
@@ -78,7 +81,7 @@ function Home() {
           <li><a onClick={() => {scroll.scrollTo($('#unity').position().top)}}>Unity</a></li>
         </ul>
       </nav> 
-      <button className='scrollToTop' onClick={scrollToTop}>△</button>
+      <button className='scrollToTop' onClick={scrollToTop} style={{display: navOn ? 'block' : 'none'}}>△</button>
       <header className='App-header'>
         <div>
           <h1>I'm Christian Auman!</h1>  
@@ -87,7 +90,7 @@ function Home() {
       </header>  
       <Unity/>
       <Web />
-      <Java />
+      <Java setNavOn={setNavOn}/>
       <div id='cSharp'>
         <h1 id='title'>C#</h1>
         <section>

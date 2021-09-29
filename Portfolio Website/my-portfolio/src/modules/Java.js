@@ -4,7 +4,7 @@ import Popup from './Popup';
 import $ from 'jquery';
 import popupStyles from './Popup.module.css'; 
 
-const Java = () => {
+const Java = (props) => {
     const offset = 4400;
 
     const offset3 = 3600;
@@ -28,13 +28,36 @@ const Java = () => {
         window.addEventListener('scroll', scrollHandler);
         return () => window.removeEventListener('scroll', scrollHandler);
     }, []);
-    const [on, setOn] = useState(false);
+    const [trophyOn, setTrophyOn] = useState(false);
+    const [plaque1On, setPlaque1On] = useState(false);
+
     const handleClose = () => {
-        $('#' + popupStyles.box).animate({height: '0', opacity: 0}, 200, 'swing'); 
+        $('.' + popupStyles.box).animate({height: '0', opacity: 0, overflow: 'hidden'}, 200, 'swing'); 
+        $('.' + styles.popupDescriptionContainer).css('overflow', 'hidden');
+        $('body').css('overflow', 'overlay');
+    }
+
+    const handleTrophyClose = () => {
+        handleClose();
         setTimeout(() => {
-            setOn(false);
+            setTrophyOn(false);
+            props.setNavOn(true);
+        }, 200);
+    };
+
+    const handlePlaque1Close = () => {
+        handleClose();
+        setTimeout(() => {
+            setPlaque1On(false);
+            props.setNavOn(true);
         }, 200);
     }
+
+    const handleClick = () => {
+        $('.' + popupStyles.box).animate({height: '50%', opacity: '1'}, 200, 'swing', ()=>{$('.' + styles.popupDescriptionContainer).css('overflow', 'auto')});    
+        $('body').css('overflow', 'hidden');
+        props.setNavOn(false);
+    };
     return(
         <div id='java'> 
             <img id={styles.clouds} style={{transform: `translateY(${((offsetY) * -0.09) * 100 / window.innerWidth}vw)`}}/> 
@@ -78,15 +101,42 @@ const Java = () => {
             <span id={styles.grass}></span>
             <div id={styles.dirt}>  
                 <div id={styles.caveImg1}>  
+                    <img id={styles.plaque1} onClick={()=> {
+                        handleClick();
+                        setPlaque1On(true);
+                    }}/>
                     <img id={styles.trophyImg} onClick={() => {
-                        $('#' + popupStyles.box).animate({height: '50%', opacity: '1'}, 200, 'swing');  
-                        setOn(true);
+                        handleClick();
+                        setTrophyOn(true);
                     }}/> 
-                    <Popup content={ 
-                        <div>   
-                            Hello there!
+                    <Popup className={styles.popup} content={ 
+                        <div className={styles.popupContainer}>   
+                            <div className={styles.popupDescriptionContainer}> 
+                                <h1>Winning Regionals</h1>
+                                <p className={styles.popupDescription}>asjfoasjdiofjsioajfijsadiopjfaiospj</p>
+                            </div>
+                            <div className={styles.popupImg} id={styles.plaque1PopupImg} />
                         </div>
-                    } display={on ? 'block' : 'none'} handleClose={handleClose}/>
+                    } display={plaque1On ? 'block' : 'none'} handleClose={handlePlaque1Close}/>
+                    <Popup className={styles.popup} content={ 
+                        <div className={styles.popupContainer}>   
+                            <div className={styles.popupDescriptionContainer}>
+                                <h1>Winning States</h1>
+                                <p className={styles.popupDescription}>
+                                    About two years ago, I became a junior at the Nordonia high school. 
+                                    This means that I was able to join CVCC (Cuyahoga Valley Career Center). 
+                                    I signed up for the PSD (Programming and Software Development) class which
+                                    was the best choice that I could have made. During the year, I took part in
+                                    a competition for Java. I won the regional competition which is shown with the 
+                                    plaque hanging at the top. After, I then moved on to the next level which was states.
+                                    After a lot of preperation, I competed, won first place, and was in the qualifying
+                                    round for nationals! I didn't place in nationals but overall, it was an 
+                                    experience to remember and I learned a lot from doing it. 
+                                </p>
+                            </div>
+                            <div className={styles.popupImg} id={styles.trophyPopupImg} />
+                        </div>
+                    } display={trophyOn ? 'block' : 'none'} handleClose={handleTrophyClose} />
                 </div> 
             </div>
         </div>

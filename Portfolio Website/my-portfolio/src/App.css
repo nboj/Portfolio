@@ -129,7 +129,7 @@ body {
 }
 
 #logo1 >* {
-  transition: all 1s;
+  transition: all 0.2s;
 }
 
 .letters {    
