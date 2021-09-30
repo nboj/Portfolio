@@ -113,7 +113,11 @@ const Java = (props) => {
                         <div className={styles.popupContainer}>   
                             <div className={styles.popupDescriptionContainer}> 
                                 <h1>Winning Regionals</h1>
-                                <p className={styles.popupDescription}>asjfoasjdiofjsioajfijsadiopjfaiospj</p>
+                                <p className={styles.popupDescription}>
+                                    This is the plaque that I won from competing in a competition for java.
+                                    This award is from regionals where everyone in the class took part in. 
+                                    I ended up winning first place and moving on to states which I talk about with the trophy.    
+                                </p>
                             </div>
                             <div className={styles.popupImg} id={styles.plaque1PopupImg} />
                         </div>
@@ -123,12 +127,12 @@ const Java = (props) => {
                             <div className={styles.popupDescriptionContainer}>
                                 <h1>Winning States</h1>
                                 <p className={styles.popupDescription}>
-                                    About two years ago, I became a junior at the Nordonia high school. 
+                                    About one year ago, I became a junior at the Nordonia high school. 
                                     This means that I was able to join CVCC (Cuyahoga Valley Career Center). 
                                     I signed up for the PSD (Programming and Software Development) class which
                                     was the best choice that I could have made. During the year, I took part in
-                                    a competition for Java. I won the regional competition which is shown with the 
-                                    plaque hanging at the top. After, I then moved on to the next level which was states.
+                                    a competition for Java. I won regionals which is shown with the plaque. 
+                                    After, I then moved on to the next level which was states.
                                     After a lot of preperation, I competed, won first place, and was in the qualifying
                                     round for nationals! I didn't place in nationals but overall, it was an 
                                     experience to remember and I learned a lot from doing it. 
