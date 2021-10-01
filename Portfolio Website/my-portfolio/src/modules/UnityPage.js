@@ -24,8 +24,8 @@ const UnityPage = (props) => {
                         transform: `skewY(${Math.pow(Math.pow(offsetY, 4), .1) / 4}deg)`,
                         opacity: `${-Math.pow(Math.pow(offsetY, 4), .2) / 4 * 0.05 + 1 <= 0 ? 0 : -Math.pow(Math.pow(offsetY, 4), .2) / 4 * 0.05 + 1}`,
                     }}>{props.title}</h1>  
+                <div style={{top: `${offsetY * 0.6}px`, backgroundImage: `url(${props.src})`, backgroundSize: 'cover', backgroundPosition: 'center'}}/>
                 </div>
-                <img src={props.src} style={{transform: `translateY(${offsetY * 0.6}px)`}}/>
             </div> 
             <div id={styles.descriptionBackground}>  
                 <h1 id={styles.descriptionTitle}>About</h1> 

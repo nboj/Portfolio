@@ -272,11 +272,11 @@ div.java {
     display: block;  
     position: absolute;
     content: url(../images/Trophy.png); 
-    aspect-ratio: 1512 / 2016;
-    width: 20.84vw;
-    left: 60%; 
-    top: 8.91vw;    
-    transition: .2s width ease-out, .2s top ease-out; 
+    aspect-ratio: 312 / 994;
+    width:  8.333333333333334vw;
+    right: 23%; 
+    bottom: 1.5625vw;   
+    transition: .2s width ease-out, .2s top ease-out,  .2s right ease-out; 
 }
 
 #plaque1 {
@@ -286,23 +286,24 @@ div.java {
     content: url(../images/plaque1Edited.png);
     aspect-ratio: 2225 / 2974;
     z-index: 1;
-    width: 100px;
+    width: 5.208333333333333vw;
     right: 10%;
-    bottom: 60px; 
+    bottom: 3.125vw;  
     transition: .2s width ease-out, .2s top ease-out, 0.2s right ease-out; 
 }
 
 #plaque1:hover { 
-    width: 110px; 
-    right: calc(10% - 10px);
+    width: 5.729166666666667vw; 
+    right: calc(10% - 0.5208333333333334vw);
     cursor: pointer;  
     filter: drop-shadow(1px 0px 0px yellow) drop-shadow(-1px 0px 0px yellow) drop-shadow(0px 1px 0px yellow) drop-shadow(0px -1px 0px yellow);  
 }
 
 #trophyImg:hover { 
     cursor: pointer;
-    width: 21.3542vw;
-    top: 8.125vw;
+    width: 8.854166666666666vw;
+    bottom: 1.5625vw;  
+    right: calc(23% - 0.2604166666666667vw);
     filter: drop-shadow(1px 0px 0px yellow) drop-shadow(-1px 0px 0px yellow) drop-shadow(0px 1px 0px yellow) drop-shadow(0px -1px 0px yellow);  
 }   
 
@@ -324,7 +325,7 @@ div.java {
     top: 0;
     right: 0;
     bottom: 0;
-    margin: auto;  
+    margin: auto;   
 }
 
 #trophyPopupImg { 
@@ -345,7 +346,8 @@ div.java {
     overflow: hidden;
     position: absolute;
     display: block;
-    color: #212529;
+    color: #212529;  
+    font-size: 1.5vmin;
     width: 50%;
     height: 100%;
     top: 0;
@@ -356,6 +358,63 @@ div.java {
 
 .popupDescription { 
     text-align: left;
-    text-indent: 10px;
-    margin: 0 40px; 
+    text-indent: 0.5208333333333334vw;
+    margin: 0 2.0833333333333335vw; 
+} 
+
+@media only screen and (max-width: 652px) {
+    #caveImg1 {
+        aspect-ratio: 1727 / 921;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .popupContainer {
+        overflow: auto;
+    }
+
+    .popupImg { 
+        position: absolute;
+        display: block;
+        width: 100%; 
+        height: 50%; 
+        padding: 0;
+        top: 0; 
+        margin: 0; 
+    } 
+    
+    .popupDescriptionContainer { 
+        position: absolute;
+        display: block;
+        color: #212529;  
+        font-size: 2vmin;
+        width: 100%; 
+        height: 50%; 
+        margin: 0;
+        top: 50%; 
+    } 
+}
+
+@media only screen and (max-width: 400px) {
+    #caveImg1 {
+        aspect-ratio: 1727 / 921;
+        width: 100%; 
+        height: 69vw;
+        background-size: 130vw;
+        background-position: bottom center; 
+    }
+
+    #trophyImg { 
+        width:  15vw;
+        bottom: 10px;
+    }
+
+    #plaque1 { 
+        width:  10vw;
+        bottom: 20px;
+    }
+
+    #dirt {
+        padding: 2rem 0;
+    } 
 }

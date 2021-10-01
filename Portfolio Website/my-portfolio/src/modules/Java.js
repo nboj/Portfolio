@@ -3,10 +3,27 @@ import styles from './Java.module.css';
 import Popup from './Popup';
 import $ from 'jquery';
 import popupStyles from './Popup.module.css'; 
+ 
+let height = 50;
+let hidden = true;
+window.addEventListener('resize', () => {
+    const windowWidth = window.outerWidth;
+    if (windowWidth <= 652) { 
+        height = 50;
+    } else if (windowWidth <= 780 && windowWidth >= 653) {
+        height = 30; 
+    } else if (windowWidth <= 920 && windowWidth >= 781) {
+        height = 40; 
+    } else { 
+        height = 50;
+    } 
+    if (!hidden) { 
+        $('.' + popupStyles.box).css({height: height + '%'});
+    } 
+});
 
-const Java = (props) => {
-    const offset = 4400;
-
+const Java = (props) => { 
+    const offset = 4400; 
     const offset3 = 3600;
     const offset4 = 300; 
     const offset5 = 4000;
@@ -17,7 +34,21 @@ const Java = (props) => {
     const scrollHandler = () => {
         setOffsetY(window.scrollY); 
     } 
-    useEffect(() => {
+    useEffect(() => {  
+        const windowWidth = window.outerWidth;
+        if (windowWidth <= 652) { 
+            height = 50;
+        } else if (windowWidth <= 780 && windowWidth >= 653) {
+            height = 30; 
+        } else if (windowWidth <= 920 && windowWidth >= 781) {
+            height = 40; 
+        } else { 
+            height = 50;
+        } 
+        if (!hidden) { 
+            $('.' + popupStyles.box).css({height: height + '%'});
+        } 
+
         window.onscroll = () => { 
             if (window.innerWidth < 1000) { 
                 setMult(0.1); 
@@ -35,6 +66,7 @@ const Java = (props) => {
         $('.' + popupStyles.box).animate({height: '0', opacity: 0, overflow: 'hidden'}, 200, 'swing'); 
         $('.' + styles.popupDescriptionContainer).css('overflow', 'hidden');
         $('body').css('overflow', 'overlay');
+        hidden = true;
     }
 
     const handleTrophyClose = () => {
@@ -54,9 +86,10 @@ const Java = (props) => {
     }
 
     const handleClick = () => {
-        $('.' + popupStyles.box).animate({height: '50%', opacity: '1'}, 200, 'swing', ()=>{$('.' + styles.popupDescriptionContainer).css('overflow', 'auto')});    
+        $('.' + popupStyles.box).animate({height: height + '%', opacity: '1'}, 200, 'swing', ()=>{$('.' + styles.popupDescriptionContainer).css('overflow', 'auto')});     
         $('body').css('overflow', 'hidden');
         props.setNav(false);
+        hidden = false;
     };
     return(
         <div id='java'> 
@@ -119,7 +152,7 @@ const Java = (props) => {
                                     I ended up winning first place and moving on to states which I talk about with the trophy.    
                                 </p>
                             </div>
-                            <div className={styles.popupImg} id={styles.plaque1PopupImg} />
+                            <div className={styles.popupImg + ' popupImg'} id={styles.plaque1PopupImg} />
                         </div>
                     } display={plaque1On ? 'block' : 'none'} handleClose={handlePlaque1Close}/>
                     <Popup className={styles.popup} content={ 

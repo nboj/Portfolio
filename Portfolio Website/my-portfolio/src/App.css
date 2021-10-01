@@ -261,8 +261,8 @@ body {
 #logo1 {
   position: absolute;
   float: left;  
-  width: 25px;  
-  left: 20px; 
+  width: 25px;   
+  padding: 20px;
   top: 0;
   bottom: 0;
   margin: auto;   
@@ -286,4 +286,4 @@ body {
 
 #logo1:hover #a2 { 
   transform: translateX(-200px); 
-}
+} 
