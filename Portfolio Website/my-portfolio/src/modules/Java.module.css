@@ -60,6 +60,7 @@ div.java {
 .javaImg.two {       
     left: 3.125vw; 
     width: 15.625vw; 
+    opacity: 0;
 } 
 
 #blur {
@@ -382,7 +383,7 @@ div.java {
         top: 0; 
         margin: 0; 
     } 
-    
+
     .popupDescriptionContainer { 
         position: absolute;
         display: block;

@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import styles from './Java.module.css'; 
 import Popup from './Popup';
 import $ from 'jquery';
-import popupStyles from './Popup.module.css'; 
+import popupStyles from './Popup.module.css';  
+import ScrollAnim from 'rc-scroll-anim';
+const ScrollParallax = ScrollAnim.Parallax;
  
 let height = 50;
 let hidden = true;
@@ -112,7 +114,12 @@ const Java = (props) => {
             </div>
             <img src='src\images\MinecraftBackground.jpg' width='100%' height='auto' id={styles.backgroundImg}/>
             <img src='https://www.spacemacs.org/layers/+lang/java/img/java.png' className={styles.javaImg + " " + styles.one} style={{transform: `translateY(${((offsetY - offset7) * 0.1) * 100 / window.innerWidth}vw)`}} />
-            <img src='https://theme.zdassets.com/theme_assets/2155033/bc270c23058d513de5124ffea6bf9199af7a2370.png' className={styles.javaImg + " " + styles.two} style={{transform: `translateY(${(-(offsetY - offset4) * 0.18) * 100 / window.innerWidth}vw)`}}/>
+            {/* <img src='https://theme.zdassets.com/theme_assets/2155033/bc270c23058d513de5124ffea6bf9199af7a2370.png' className={styles.javaImg + " " + styles.two} style={{transform: `translateY(${(-(offsetY - offset4) * 0.18) * 100 / window.innerWidth}vw)`}}/> */}
+            <ScrollParallax
+                animation={{opacity: 1}}
+            >
+                <img src='https://theme.zdassets.com/theme_assets/2155033/bc270c23058d513de5124ffea6bf9199af7a2370.png' className={styles.javaImg + " " + styles.two} />
+            </ScrollParallax>
             <div id={styles.steveBody} style={{transform: `translateX(${(100 * (offsetY < bodyOffset ? 300 : (offsetY - bodyOffset)) / window.innerWidth) * mult + 15.625}vw) translateY(-24vw)`}}>
                 <span id={styles.steveHead} style={{transform: `rotate(${Math.sin(offsetY * 0.01) * 5}deg)`}}/>
                 <div id={styles.armContainer}>
