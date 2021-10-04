@@ -1,9 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
-
+  
 div.java {   
     margin: 0;
     padding: 0;
 }  
+
 
 #backgroundImg {
     content: url(../images/MinecraftBackground.jpg);
@@ -34,34 +35,27 @@ div.java {
     transition: 0.1s ease-out;
 }
 
-#titleContainer { 
-    position: relative; 
-    display: block;
+#titleContainer {  
+    display: flex;
+    align-content: center;
+    justify-content: center;
     z-index: 1;
-    width: fit-content;
+    width: 100vw;
     margin: 0 auto;
-}  
-
-#javaTitleContainer {
-    position: absolute;
-    width: 100%;
-}
+}   
 
 .javaImg { 
-    position: absolute;   
     z-index: 1;
 }
 
-.javaImg.one { 
-    right: 2.6041vw;  
-    width: 15.625vw; 
+.javaImg.one {    
+    width: 15.625vw;  
 }
 
-.javaImg.two {       
+.javaImg.two {         
     left: 3.125vw; 
-    width: 15.625vw; 
-    opacity: 0;
-} 
+    width: 15.625vw;   
+}     
 
 #blur {
     width: 100%;
@@ -158,8 +152,14 @@ div.java {
     padding: 8vw .3vw; 
 } 
 
-#steveBody { 
+.steve { 
     position: absolute;
+    z-index: 1;
+    transform: translateY(-24vw);
+    transition: all 0.1s ease-out;
+}
+
+#steveBody {  
     z-index: 1;  
     width: 11.7vw;
     height: 22.3vw;

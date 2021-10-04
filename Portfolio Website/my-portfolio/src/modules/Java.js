@@ -3,11 +3,11 @@ import styles from './Java.module.css';
 import Popup from './Popup';
 import $ from 'jquery';
 import popupStyles from './Popup.module.css';  
-import ScrollAnim from 'rc-scroll-anim';
-const ScrollParallax = ScrollAnim.Parallax;
+import { Parallax, useController } from 'react-scroll-parallax'; 
  
 let height = 50;
 let hidden = true;
+
 window.addEventListener('resize', () => {
     const windowWidth = window.outerWidth;
     if (windowWidth <= 652) { 
@@ -23,18 +23,20 @@ window.addEventListener('resize', () => {
         $('.' + popupStyles.box).css({height: height + '%'});
     } 
 });
-
-const Java = (props) => { 
-    const offset = 4400; 
-    const offset3 = 3600;
-    const offset4 = 300; 
-    const offset5 = 4000;
-    const bodyOffset = 4200;
-    const offset7 = 16000; 
-    const [mult, setMult] = useState(0.3);
+const Java = (props) => {  
+    const { parallaxController } = useController();
+    parallaxController.update();
+    const [mult, setMult] = useState(30);
     const [offsetY, setOffsetY] = useState(window.scrollY);
     const scrollHandler = () => {
         setOffsetY(window.scrollY); 
+        if(window.innerWidth < 400) {
+            setMult(10);
+        } else if (window.innerWidth < 840) { 
+            setMult(20); 
+        } else {
+            setMult(30);
+        }
     } 
     useEffect(() => {  
         const windowWidth = window.outerWidth;
@@ -49,15 +51,7 @@ const Java = (props) => {
         } 
         if (!hidden) { 
             $('.' + popupStyles.box).css({height: height + '%'});
-        } 
-
-        window.onscroll = () => { 
-            if (window.innerWidth < 1000) { 
-                setMult(0.1); 
-            } else {
-                setMult(0.3);
-            }
-        }
+        }  
         window.addEventListener('scroll', scrollHandler);
         return () => window.removeEventListener('scroll', scrollHandler);
     }, []);
@@ -69,7 +63,7 @@ const Java = (props) => {
         $('.' + styles.popupDescriptionContainer).css('overflow', 'hidden');
         $('body').css('overflow', 'overlay');
         hidden = true;
-    }
+    };
 
     const handleTrophyClose = () => {
         handleClose();
@@ -85,7 +79,7 @@ const Java = (props) => {
             setPlaque1On(false);
             props.setNav(true);
         }, 200);
-    }
+    };
 
     const handleClick = () => {
         $('.' + popupStyles.box).animate({height: height + '%', opacity: '1'}, 200, 'swing', ()=>{$('.' + styles.popupDescriptionContainer).css('overflow', 'auto')});     
@@ -96,48 +90,78 @@ const Java = (props) => {
     return(
         <div id='java'> 
             <img id={styles.clouds} style={{transform: `translateY(${((offsetY) * -0.09) * 100 / window.innerWidth}vw)`}}/> 
-            <div id={styles.javaTitleContainer}>
-                <div id={styles.titleContainer} style={{transform: `translateY(${((offsetY - offset5) * 0.1) * 100 / window.innerWidth}vw)`}}>
-                    <h1 className={styles.javaTitle} style={{
-                        transform: `translateX(${(offsetY - offset) * 0.1 > 0 || (offsetY - offset3) < 0 ? 0 : (offsetY - offset) * 0.1}px)`, 
-                        filter: `drop-shadow(${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px ${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px 5px rgba(1, 1, 1, 0.548))`}}>J</h1>
-                    <h1 className={styles.javaTitle} style={{
-                        transform: `translateY(${(offsetY - offset) * 0.1 > 0 || (offsetY - offset3) < 0  ? 0 : (offsetY - offset) * 0.1}px)`, 
-                        filter: `drop-shadow(${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px ${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px 5px rgba(1, 1, 1, 0.548))`}}>a</h1>
-                    <h1 className={styles.javaTitle} style={{
-                        transform: `translateY(${(offsetY - offset) * -0.1 < 0 || (offsetY - offset3) < 0  ? 0 : (offsetY - offset) * -0.1}px)`, 
-                        filter: `drop-shadow(${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px ${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px 5px rgba(1, 1, 1, 0.548))`}}>v</h1>
-                    <h1 className={styles.javaTitle} style={{
-                        transform: `translateX(${(offsetY - offset) * -0.1 < 0 || (offsetY - offset3) < 0  ? 0 : (offsetY - offset) * -0.1}px)`, 
-                        filter: `drop-shadow(${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px ${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px 5px rgba(1, 1, 1, 0.548))`}}>a</h1>
-                </div>   
-            </div>
-            <img src='src\images\MinecraftBackground.jpg' width='100%' height='auto' id={styles.backgroundImg}/>
-            <img src='https://www.spacemacs.org/layers/+lang/java/img/java.png' className={styles.javaImg + " " + styles.one} style={{transform: `translateY(${((offsetY - offset7) * 0.1) * 100 / window.innerWidth}vw)`}} />
-            {/* <img src='https://theme.zdassets.com/theme_assets/2155033/bc270c23058d513de5124ffea6bf9199af7a2370.png' className={styles.javaImg + " " + styles.two} style={{transform: `translateY(${(-(offsetY - offset4) * 0.18) * 100 / window.innerWidth}vw)`}}/> */}
-            <ScrollParallax
-                animation={{opacity: 1}}
+                {/* <div id={styles.javaTitleContainer}> */}
+            <Parallax
+                tagOuter='div'
+                y={['0', '50']} 
+                styleInner={{zIndex: '1', position: 'absolute'}}
             >
-                <img src='https://theme.zdassets.com/theme_assets/2155033/bc270c23058d513de5124ffea6bf9199af7a2370.png' className={styles.javaImg + " " + styles.two} />
-            </ScrollParallax>
-            <div id={styles.steveBody} style={{transform: `translateX(${(100 * (offsetY < bodyOffset ? 300 : (offsetY - bodyOffset)) / window.innerWidth) * mult + 15.625}vw) translateY(-24vw)`}}>
-                <span id={styles.steveHead} style={{transform: `rotate(${Math.sin(offsetY * 0.01) * 5}deg)`}}/>
-                <div id={styles.armContainer}>
-                    <div id={styles.steveArm1} style={{transform: `rotate(${Math.sin(offsetY * 0.01) * 30}deg) translateX(${(-Math.sin(offsetY * 0.01) * 30) * 100 / window.innerWidth}vw)`}} >
-                        <span id={styles.stevePickaxe} />
+                    <div id={styles.titleContainer}>
+                    {/* transform: `translateX(${(offsetY - offset) * 0.1 > 0 || (offsetY - offset3) < 0 ? 0 : (offsetY - offset) * 0.1}px)`, 
+                                filter: `drop-shadow(${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px ${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px 5px rgba(1, 1, 1, 0.548))`}}>J</h1> */}
+                        <Parallax 
+                            x={[-30, 0]}
+                        >
+                            <h1 className={styles.javaTitle}>J</h1>
+                        </Parallax> 
+                        <Parallax 
+                            y={[-20, 0]} 
+                        >
+                            <h1 className={styles.javaTitle}>a</h1>
+                        </Parallax> 
+                        <Parallax 
+                            y={[20, 0]} 
+                        >
+                            <h1 className={styles.javaTitle}>v</h1>
+                        </Parallax> 
+                        <Parallax 
+                            x={[30, 0]}
+                        >
+                            <h1 className={styles.javaTitle}>a</h1>
+                        </Parallax> 
+                    </div>   
+                {/* </div> */}
+            </Parallax>
+            <img src='src\images\MinecraftBackground.jpg' width='100%' height='auto' id={styles.backgroundImg}/>
+            {/* <img src='https://www.spacemacs.org/layers/+lang/java/img/java.png' className={styles.javaImg + " " + styles.one} style={{transform: `translateY(${((offsetY - offset7) * 0.1) * 100 / window.innerWidth}vw)`}} /> */}
+            <Parallax 
+                tagOuter='div' 
+                y={[-50, -10]}
+                styleInner={{position: 'absolute'}}
+                styleOuter={{transform: 'translateY(-46.875vw)'}}>  
+                <img src='https://theme.zdassets.com/theme_assets/2155033/bc270c23058d513de5124ffea6bf9199af7a2370.png' className={styles.javaImg + " " + styles.two} />  
+            </Parallax>
+            <Parallax 
+                tagOuter='div' 
+                y={[0, -70]}
+                styleInner={{position: 'absolute', right: '2.6041vw'}}
+                styleOuter={{transform: 'translateY(-39.0625vw)'}}>  
+                <img src='https://www.spacemacs.org/layers/+lang/java/img/java.png' className={styles.javaImg + " " + styles.one}/>
+            </Parallax>
+            <Parallax 
+                className={styles.steve}  
+                x={[200, 600]}
+            >
+                {/* style={{transform: `translateX(${(100 * (offsetY < bodyOffset ? 300 : (offsetY - bodyOffset)) / window.innerWidth) * mult + 15.625}vw) translateY(-24vw)`}} */}
+                <div id={styles.steveBody}>
+                    <span id={styles.steveHead} style={{transform: `rotate(${Math.sin(offsetY * 0.01) * 5}deg)`}}/>
+                    <div id={styles.armContainer}>
+                        <div id={styles.steveArm1} style={{transform: `rotate(${Math.sin(offsetY * 0.01) * mult}deg) translateX(${(-Math.sin(offsetY * 0.01) * mult) * 100 / window.innerWidth}vw)`}} >
+                            <span id={styles.stevePickaxe} />
+                        </div>
                     </div>
-                </div>
-                <span id={styles.steveTorso}/>
-                <div id={styles.armContainer}> 
-                    <span id={styles.steveArm2} style={{transform: `rotate(${-Math.sin(offsetY * 0.01) * 30}deg) translateX(${(Math.sin(offsetY * 0.01) * 30) * 100 / window.innerWidth}vw)`}}/>
-                </div>
-                <div id={styles.armContainer}>
-                    <span id={styles.steveLeg1} style={{transform: `rotate(${Math.sin(offsetY * 0.01) * 30}deg) translateX(${(-Math.sin(offsetY * 0.01) * 30) * 100 / window.innerWidth}vw)`}}/>
-                </div>
-                <div id={styles.armContainer}> 
-                    <span id={styles.steveLeg2} style={{transform: `rotate(${-Math.sin(offsetY * 0.01) * 30}deg) translateX(${(Math.sin(offsetY * 0.01) * 30) * 100 / window.innerWidth}vw)`}} />
-                </div>
-            </div> 
+                    <span id={styles.steveTorso}/>
+                    <div id={styles.armContainer}> 
+                        <span id={styles.steveArm2} style={{transform: `rotate(${-Math.sin(offsetY * 0.01) * mult}deg) translateX(${(Math.sin(offsetY * 0.01) * mult) * 100 / window.innerWidth}vw)`}}/>
+                    </div>
+                    <div id={styles.armContainer}>
+                        <span id={styles.steveLeg1} style={{transform: `rotate(${Math.sin(offsetY * 0.01) * mult}deg) translateX(${(-Math.sin(offsetY * 0.01) * mult) * 100 / window.innerWidth}vw)`}}/>
+                    </div>
+                    <div id={styles.armContainer}> 
+                        <span id={styles.steveLeg2} style={{transform: `rotate(${-Math.sin(offsetY * 0.01) * mult}deg) translateX(${(Math.sin(offsetY * 0.01) * mult) * 100 / window.innerWidth}vw)`}} />
+                    </div>
+                </div> 
+            </Parallax>
             <span id={styles.grass}></span>
             <div id={styles.dirt}>  
                 <div id={styles.caveImg1}>  
