@@ -1,0 +1,18 @@
+::-webkit-scrollbar {
+    width: 8px;
+  }
+::-webkit-scrollbar-thumb {
+    background-color: #0d47a1; 
+    z-index: 100;
+    border-radius: 20px;
+  }
+::-webkit-scrollbar-track {
+    position: absolute;
+    right: -3rem;
+    top: -50rem;
+    background: transparent;
+  }
+
+#parallax {
+    overflow: overlay !important;
+}
