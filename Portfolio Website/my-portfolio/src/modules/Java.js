@@ -4,6 +4,7 @@ import Popup from './Popup';
 import $ from 'jquery';
 import popupStyles from './Popup.module.css';  
 import { Parallax, useController } from 'react-scroll-parallax'; 
+import { config } from 'react-spring'; 
  
 let height = 50;
 let hidden = true;
@@ -23,7 +24,7 @@ window.addEventListener('resize', () => {
         $('.' + popupStyles.box).css({height: height + '%'});
     } 
 });
-const Java = (props) => {  
+const Java = (props) => {   
     const { parallaxController } = useController();
     parallaxController.update();
     const [mult, setMult] = useState(30);

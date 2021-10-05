@@ -1,0 +1,24 @@
+#header {
+    background: black;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#typeHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;    
+} 
+
+#typeHeaderBackground {
+    width: fit-content;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
