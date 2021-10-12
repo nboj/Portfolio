@@ -1,65 +1,19 @@
 import '../App.css';
-import React, { Fragment, useEffect, useState } from 'react';  
+import React, { useEffect, useState } from 'react';
 import $ from 'jquery';  
 import { animateScroll as scroll} from 'react-scroll';
 import Unity from '../modules/unity';
 import Web from '../modules/web';
 import Java from '../modules/Java';
+import Typewriter from "../modules/Typewriter";
 
-const date = new Date();
-let i = 0;  
-let a = 1100;   
-const offset = 450;
-let on = true;
-function ForwardsLoop(word, text, setText) { 
-  setTimeout(() => {  
-    setText(word.substring(0, i));
-    i++;
-    if (i <= word.length)
-    ForwardsLoop(word, text, setText); 
-    else {
-      BackwardsLoop(word, text, setText);
-    }
-  }, 100);
-} 
-function BackwardsLoop(word, text, setText) { 
-  setTimeout(() => {  
-    setText(word.substring(0, i));
-    i--;
-    if (i >= 0)
-    BackwardsLoop(word, text, setText); 
-  }, 50); 
-} 
-let index = 0;    
 function Home() {   
   useEffect(() => { 
     $('html').css({background: 'white'});
   }, []);
   const scrollToTop = () => {
     scroll.scrollToTop();
-  }  
-  const [text, setText] = useState(""); 
-  const texts = [", pet lover...", ", game developer...", ", gamer...", ", varcity soccer player..."]
-  useEffect(() => { 
-    window.onblur = () => {
-      on = false;
-    }
-
-    window.onfocus = () => {
-      on = true;
-    }
-    let word = "";
-    const interval = setInterval(() => {
-      if (window.scrollY < offset && on) {  
-        word = texts[index]; 
-        ForwardsLoop(word, text, setText);  
-        index = index >= texts.length - 1 ? index = 0 : index + 1;  
-        a = word.length * 125; 
-        i = 0;
-      }
-    }, a);    
-    return () => clearInterval(interval);
-  });   
+  }
 
   const [navOn, setNavOn] = useState(true);
 
@@ -84,8 +38,16 @@ function Home() {
       <button className='scrollToTop' onClick={scrollToTop} style={{display: navOn ? 'block' : 'none'}}>△</button>
       <header className='App-header'>
         <div>
-          <h1>I'm Christian Auman!</h1>  
-          <p>{date.getFullYear() - 2003 - (date.getMonth() < 8 ? 1 : 0)} years old, computer scientist{text}</p>
+          <h1>I'm Christian Auman!</h1>
+          <Typewriter
+              options={{
+                preText: '18 years old, computer scientist, ',
+                words: ["pet lover...", "game developer...", "gamer...", "varcity soccer player..."],
+                deleteRate: 60,
+                printRate: 40,
+                delay: (Math.random() * 1000 + 2000)
+              }}
+          />
         </div>
       </header>  
       <Unity/>

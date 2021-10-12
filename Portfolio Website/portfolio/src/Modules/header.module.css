@@ -3,18 +3,12 @@
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     color: white;
     font-size: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#typeHeader {
-    display: block;
-    position: static;
-    width: fit-content;
-    height: 3.6458333333333335vw;
-}  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset; 
+} 
 
 #typeHeaderBackground {
     display: flex;
@@ -34,19 +28,4 @@
     bottom: 0;
     top: 0;
     margin: auto;
-} 
-
-#headerTextContainer {
-    display: block;
-    position: static;
-    width: fit-content;
-    height: 70px;
-    
-}
-
-
-#typeHeader >* {  
-    display: block;
-    position: relative;
-    float: left;
-}  
+}   

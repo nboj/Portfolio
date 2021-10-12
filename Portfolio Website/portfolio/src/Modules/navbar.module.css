@@ -1,0 +1,24 @@
+#navbar {
+    position: fixed;
+    display: block;
+    z-index: 10;
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.596);
+    backdrop-filter: blur(8px);
+}
+
+ul#navbar > li { 
+    position: relative; 
+    display: block;
+    float: right; 
+    color: white;
+    padding: 15px;
+}
+
+ul#navbar > li:hover {
+    background-color: rgba(0, 0, 0, 0.842);
+    cursor: pointer;
+} 

@@ -1,0 +1,13 @@
+#unity {
+    text-align: center;
+}
+
+#title {
+    display: block; 
+    padding: 100px 0 0 0;
+    font-size: 50px; 
+}
+
+#description {
+    margin: 250px 0 0 0;
+}
