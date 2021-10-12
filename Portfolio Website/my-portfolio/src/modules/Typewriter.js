@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 const Typewriter = (props) => {
     const words = props.options.words;
@@ -32,10 +32,10 @@ const Typewriter = (props) => {
         }, props.options.deleteRate);
     }
 
-
-    window.onload = () => {
+    useEffect(() => {
         iterateForwards();
-    }
+    }, []);
+
     return (
         <p style={props.options.style}>{ props.options.preText + text}</p>
     );
