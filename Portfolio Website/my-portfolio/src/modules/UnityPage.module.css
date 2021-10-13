@@ -15,7 +15,7 @@
     background: #00000027; 
     color: white;
     box-shadow: 0.26vw 0.26vw 0.78125vw 0.26vw rgba(0,0,0,0), 0px 0.521vw 0.6771vw -0.365vw #000000;
-    backdrop-filter: blur(10px);  
+    backdrop-filter: blur(10px);
     
 }   
 
@@ -51,12 +51,14 @@
     background-image: url('https://i.ya-webdesign.com/images/website-background-patterns-png-4.png');
     background-position: center, center;
     background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .description {  
     padding: 20px;  
     text-align: center;
-    margin-bottom: 100px; 
+    margin-bottom: 100px;
 }
 
 #descriptionTitle {

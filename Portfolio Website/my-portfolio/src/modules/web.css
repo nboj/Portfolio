@@ -150,7 +150,7 @@ div#web:after {
     position: absolute;
     bottom: 0px;
     border: none; 
-    background-image: url('../images//BlueSplash2.png');  
+    background-image: url('../images/BlueSplash2.png');
     background-position-y: bottom;
     background-size: 98.4375vw;
     width: 100%; 

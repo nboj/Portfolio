@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import Card from './card';
+import React, {useEffect, useRef, useState} from 'react';
 import ArrowButton from './arrowButton';
 import './carousel.css';
 import $ from 'jquery';
@@ -19,20 +18,20 @@ const Carousel = (props) => {
     };
     const [cardList, setCardList] = useState(getList());  
     const [symbolList, setSymbolList] = useState([]);
-    const changeSymbolList = (index) => { 
+    const changeSymbolList = useRef((index) => {
         var tempSymbolList = [];
         for (var i = 0; i < props.cards.length; i++) {
             tempSymbolList.push(i===index?'⬤':'〇');
         } 
         setSymbolList(tempSymbolList);
-    };
+    });
     const shiftListLeft = () => { 
         symbolIndex--;
         cardIndex--;
         symbolIndex = symbolIndex < 0 ? props.cards.length - 1 : symbolIndex; 
         cardIndex = cardIndex < 0 ? props.cards.length - 1 : cardIndex; 
         setCardList(getList()); 
-        changeSymbolList(symbolIndex); 
+        changeSymbolList.current(symbolIndex);
         $('#card-1').css({transform: 'translateY(0px)', filter: 'blur(0)'});
         $('#card-3').css({transform: 'translateY(0px)', filter: 'blur(0)'});   
         setTimeout(() => { 
@@ -49,7 +48,7 @@ const Carousel = (props) => {
         cardIndex = cardIndex > props.cards.length - 1 ? 0 : cardIndex;
         symbolIndex = symbolIndex >= props.cards.length ? 0: symbolIndex; 
         setCardList(getList());
-        changeSymbolList(symbolIndex); 
+        changeSymbolList.current(symbolIndex);
         $('#card-1').css({transform: 'translateY(0px)'});
         $('#card-3').css({transform: 'translateY(0px)'});
         $('#card-1').css({filter: 'blur(0)'});
@@ -62,7 +61,7 @@ const Carousel = (props) => {
         }, 250);
     };
     useEffect(() => {
-        changeSymbolList(symbolIndex);
+        changeSymbolList.current(symbolIndex);
     }, []);
     window.onresize = () => {
         setCardList(getList());
@@ -76,10 +75,10 @@ const Carousel = (props) => {
                 <span id='left-arrow' onClick={shiftListLeft}><ArrowButton symbol='◀' /></span> 
                 {
                     cardList.map((card, index) => {
-                        if(cardList.length == 1)
-                            return <div id='card-2'>{card}</div>
+                        if(cardList.length === 1)
+                            return <div id='card-2' key={index}>{card}</div>
                         else
-                            return <div id={'card-' + (index + 1)}>{card}</div>
+                            return <div id={'card-' + (index + 1)} key={index}>{card}</div>
                     })
                 }  
                 <span id='right-arrow' onClick={shiftListRight}><ArrowButton symbol='▶' /></span>

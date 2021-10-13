@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import './web.css';
-import $ from 'jquery';
 import { useEffect } from 'react';
 
 const Web = () => {
@@ -9,7 +8,6 @@ const Web = () => {
     const [offsetY, setOffsetY] = useState(window.pageYOffset);
     const handleScroll = () => {
         setOffsetY(window.scrollY);
-        console.log(window.scrollY);
     };
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -41,7 +39,7 @@ const Web = () => {
                 </div> 
                 <div id='transitionImg' style={{backgroundPositionX: `${offsetY * 0.2}px`}} />
                 <div id='iconContainer'>
-                    <img src='https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png' className='reactLogo' style={{transform: `translateX(${(offsetY - 2300) < offsetY && offsetY < 4070 ? (offsetY - 2300) * -0.5 : 0}px) rotate(${-offsetY * 0.2}deg)`}}/>
+                    <img alt='' src='https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png' className='reactLogo' style={{transform: `translateX(${(offsetY - 2300) < offsetY && offsetY < 4070 ? (offsetY - 2300) * -0.5 : 0}px) rotate(${-offsetY * 0.2}deg)`}}/>
                 </div>
             </div> 
             <div id='react'>

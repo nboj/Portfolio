@@ -3,8 +3,7 @@ import styles from './Java.module.css';
 import Popup from './Popup';
 import $ from 'jquery';
 import popupStyles from './Popup.module.css';  
-import { Parallax, useController } from 'react-scroll-parallax'; 
-import { config } from 'react-spring'; 
+import { Parallax, useController } from 'react-scroll-parallax';
  
 let height = 50;
 let hidden = true;
@@ -90,7 +89,7 @@ const Java = (props) => {
     };
     return(
         <div id='java'> 
-            <img id={styles.clouds} style={{transform: `translateY(${((offsetY) * -0.09) * 100 / window.innerWidth}vw)`}}/> 
+            <img alt='' id={styles.clouds} style={{transform: `translateY(${((offsetY) * -0.09) * 100 / window.innerWidth}vw)`}}/>
                 {/* <div id={styles.javaTitleContainer}> */}
             <Parallax
                 tagOuter='div'
@@ -100,48 +99,32 @@ const Java = (props) => {
                     <div id={styles.titleContainer}>
                     {/* transform: `translateX(${(offsetY - offset) * 0.1 > 0 || (offsetY - offset3) < 0 ? 0 : (offsetY - offset) * 0.1}px)`, 
                                 filter: `drop-shadow(${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px ${(offsetY - 4100) * 0.02 < 0 ? 0 : (offsetY - 4100) * 0.02 > 10 ? 10 : (offsetY - 4100) * 0.02}px 5px rgba(1, 1, 1, 0.548))`}}>J</h1> */}
-                        <Parallax 
-                            x={[-30, 0]}
-                        >
                             <h1 className={styles.javaTitle}>J</h1>
-                        </Parallax> 
-                        <Parallax 
-                            y={[-20, 0]} 
-                        >
                             <h1 className={styles.javaTitle}>a</h1>
-                        </Parallax> 
-                        <Parallax 
-                            y={[20, 0]} 
-                        >
                             <h1 className={styles.javaTitle}>v</h1>
-                        </Parallax> 
-                        <Parallax 
-                            x={[30, 0]}
-                        >
                             <h1 className={styles.javaTitle}>a</h1>
-                        </Parallax> 
                     </div>   
                 {/* </div> */}
             </Parallax>
-            <img src='src\images\MinecraftBackground.jpg' width='100%' height='auto' id={styles.backgroundImg}/>
-            {/* <img src='https://www.spacemacs.org/layers/+lang/java/img/java.png' className={styles.javaImg + " " + styles.one} style={{transform: `translateY(${((offsetY - offset7) * 0.1) * 100 / window.innerWidth}vw)`}} /> */}
-            <Parallax 
-                tagOuter='div' 
+            <img alt='' src='src\images\MinecraftBackground.jpg' width='100%' height='auto' id={styles.backgroundImg}/>
+            {/* <img alt''> src='https://www.spacemacs.org/layers/+lang/java/img/java.png' className={styles.javaImg + " " + styles.one} style={{transform: `translateY(${((offsetY - offset7) * 0.1) * 100 / window.innerWidth}vw)`}} /> */}
+            <Parallax
+                tagOuter='div'
                 y={[-50, -10]}
                 styleInner={{position: 'absolute'}}
-                styleOuter={{transform: 'translateY(-46.875vw)'}}>  
-                <img src='https://theme.zdassets.com/theme_assets/2155033/bc270c23058d513de5124ffea6bf9199af7a2370.png' className={styles.javaImg + " " + styles.two} />  
+                styleOuter={{transform: 'translateY(-46.875vw)'}}>
+                <img alt='' src='https://theme.zdassets.com/theme_assets/2155033/bc270c23058d513de5124ffea6bf9199af7a2370.png' className={styles.javaImg + " " + styles.two} />
             </Parallax>
-            <Parallax 
-                tagOuter='div' 
+            <Parallax
+                tagOuter='div'
                 y={[0, -70]}
                 styleInner={{position: 'absolute', right: '2.6041vw'}}
-                styleOuter={{transform: 'translateY(-39.0625vw)'}}>  
-                <img src='https://www.spacemacs.org/layers/+lang/java/img/java.png' className={styles.javaImg + " " + styles.one}/>
+                styleOuter={{transform: 'translateY(-39.0625vw)'}}>
+                <img alt='' src='https://www.spacemacs.org/layers/+lang/java/img/java.png' className={styles.javaImg + " " + styles.one}/>
             </Parallax>
             <Parallax 
                 className={styles.steve}  
-                x={[200, 600]}
+                x={[200, 500]}
             >
                 {/* style={{transform: `translateX(${(100 * (offsetY < bodyOffset ? 300 : (offsetY - bodyOffset)) / window.innerWidth) * mult + 15.625}vw) translateY(-24vw)`}} */}
                 <div id={styles.steveBody}>
@@ -165,12 +148,12 @@ const Java = (props) => {
             </Parallax>
             <span id={styles.grass}></span>
             <div id={styles.dirt}>  
-                <div id={styles.caveImg1}>  
-                    <img id={styles.plaque1} onClick={()=> {
+                <div id={styles.caveImg1}>
+                    <img alt='' id={styles.plaque1} onClick={()=> {
                         handleClick();
                         setPlaque1On(true);
                     }}/>
-                    <img id={styles.trophyImg} onClick={() => {
+                    <img alt='' id={styles.trophyImg} onClick={() => {
                         handleClick();
                         setTrophyOn(true);
                     }}/> 
@@ -198,7 +181,7 @@ const Java = (props) => {
                                     was the best choice that I could have made. During the year, I took part in
                                     a competition for Java. I won regionals which is shown with the plaque. 
                                     After, I then moved on to the next level which was states.
-                                    After a lot of preperation, I competed, won first place, and was in the qualifying
+                                    After a lot of preparation, I competed, won first place, and was in the qualifying
                                     round for nationals! I didn't place in nationals but overall, it was an 
                                     experience to remember and I learned a lot from doing it. 
                                 </p>

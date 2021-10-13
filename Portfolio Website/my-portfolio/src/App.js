@@ -1,13 +1,11 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';  
 import Home from './pages/Home'; 
-import UnityLinks, { PooperPunk, BlockBreaker, Platformer, NumberWizard } from './pages/UnityLinks'; 
-import ParallaxCache from './modules/ParallaxCache';
+import { PooperPunk, BlockBreaker, Platformer, NumberWizard } from './pages/UnityLinks';
 
 const App = () => {  
   return (   
     <Router>
-      <ParallaxCache />
       <div>
         <Switch>
           <Route path='/NumberWizard'>

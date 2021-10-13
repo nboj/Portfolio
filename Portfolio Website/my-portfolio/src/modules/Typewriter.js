@@ -1,39 +1,59 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 
 const Typewriter = (props) => {
-    const words = props.options.words;
     const [text, setText] = useState('');
+    let words = Array.from(props.options.words);
     let letterIndex = 1;
-    let wordIndex = 0;
-    const iterateForwards = () => { 
+    let previousWord;
+    const getRandomWord = () => {
+        return Math.abs(Math.round(Math.random() * (words.length - 1)));
+    }
+    let wordIndex = getRandomWord();
+    const iterateForwards = useRef(() => {
         setTimeout(() => {
-            if (letterIndex <= words[wordIndex].length) {    
-                setText(words[wordIndex].substr(0, letterIndex++)); 
-                iterateForwards(); 
-            } else {  
+            if (letterIndex <= words[wordIndex].length) {
+                setText(words[wordIndex].substr(0, letterIndex++));
+                iterateForwards.current();
+            } else {
                 letterIndex-=2;
-                setTimeout(() => { 
-                    iterateBackwards();
+                setTimeout(() => {
+                    iterateBackwards.current();
                 }, props.options.delay);
             }
-        }, props.options.printRate)
-    } 
+        }, props.options.printRate);
+    });
 
-    const iterateBackwards = () => {
+    const iterateBackwards = useRef(() => {
         setTimeout(() => {
-            if (letterIndex >= 0) { 
+            if (letterIndex >= 0) {
                 setText(words[wordIndex].substr(0, letterIndex--));
-                iterateBackwards();
+                iterateBackwards.current();
             } else {
                 letterIndex+=2;
-                wordIndex = words.length-1 > wordIndex ? wordIndex+1 : 0;
-                iterateForwards();
+                previousWord = words[wordIndex];
+                words.splice(wordIndex, 1);
+                if (words.length <= 0) {
+                    resetWords.current();
+                } else {
+                    wordIndex = getRandomWord();
+                }
+                iterateForwards.current();
             }
         }, props.options.deleteRate);
-    }
+    })
+
+    const resetWords = useRef(() => {
+        words = Array.from(props.options.words);
+        wordIndex = getRandomWord();
+        if (previousWord === words[wordIndex]) {
+            words.splice(wordIndex, 1);
+            wordIndex = getRandomWord();
+        }
+    });
 
     useEffect(() => {
-        iterateForwards();
+        resetWords.current();
+        iterateForwards.current();
     }, []);
 
     return (

@@ -20,7 +20,7 @@ body {
   padding: 0;
 }
 
-.navOptions li a {
+.navOptions li {
   color: white; 
   text-decoration: none;
   padding: 20px 0;
@@ -52,7 +52,7 @@ body {
   padding: 20px 0;
 } 
 
-.navOptions li a { 
+.navOptions li {
   padding: 20px 15px;
 }
 
