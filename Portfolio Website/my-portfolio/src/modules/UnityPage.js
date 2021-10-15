@@ -18,7 +18,8 @@ const UnityPage = (props) => {
                 mass: 0.1,
                 tension: 500,
                 friction: 1,
-                clamp: true
+                clamp: true,
+                precision: 1
             }}
         >
                 <ParallaxLayer

@@ -6,7 +6,7 @@
     text-align: center;
     color: white;
     padding-bottom: 50px;  
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0 3px 12px;
     transition: .5s;
 } 
 
@@ -52,7 +52,16 @@
 
 @media screen and (max-width: 450px) {
     .card { 
-        width: 100%;   
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #card-2 {
+        margin: 0;
+    }
+
+    .card img {
+        border-radius: 0;
     }
 
     #carousel {
