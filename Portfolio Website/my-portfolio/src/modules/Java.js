@@ -120,7 +120,7 @@ const Java = (props) => {
             {/* <img alt''> src='https://www.spacemacs.org/layers/+lang/java/img/java.png' className={styles.javaImg + " " + styles.one} style={{transform: `translateY(${((offsetY - offset7) * 0.1) * 100 / window.innerWidth}vw)`}} /> */}
             <Parallax
                 tagOuter='div'
-                y={[-50, -10]}
+                y={[10, -20]}
                 styleInner={{position: 'absolute'}}
                 styleOuter={{transform: 'translateY(-46.875vw)'}}>
                 <img alt=''
