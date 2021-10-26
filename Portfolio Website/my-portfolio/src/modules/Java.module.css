@@ -72,7 +72,8 @@ div.java {
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
     display: block;
-    position: absolute; 
+    position: absolute;
+    z-index: 100 !important;
     background-position: center;
     background-size: cover;
     width: 27.042vw;

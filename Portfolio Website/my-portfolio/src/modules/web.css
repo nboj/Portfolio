@@ -75,7 +75,7 @@ div#web:after {
     /* background: linear-gradient(to bottom, #1565c0, #1976d2, #1e88e5, #2196f3, #42a5f5, #64b5f6, #90caf9, #bbdefb); */
     background: linear-gradient(to bottom, #1565c0, #1976d2, #1e88e5, #2196f3, #42a5f5, #64b5f6, #78aedd, #78aedd);
     background-position: center, center;
-    background-size: cover; 
+    background-size: cover;
 }  
 
 #react h1 {
@@ -126,6 +126,7 @@ div#web:after {
     justify-content: center;
     padding: 0 0 15.625vw 0;
     background-size: cover;
+    text-align: left;
     background-position: center center; 
     width: 100%;
     height: 100%;   
@@ -141,9 +142,16 @@ div#web:after {
     border-radius: 2px; 
     width: 400px;
     height: 400px;
-    text-align: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
-}   
+}
+
+#flex2 h1 {
+    text-align: center;
+}
+
+#flex2 p {
+    margin: 20px;
+}
 
 #transitionImg {  
     display: block;
@@ -158,4 +166,6 @@ div#web:after {
     padding: 0;
     height: 26.042vw;  
 }
+
+
  

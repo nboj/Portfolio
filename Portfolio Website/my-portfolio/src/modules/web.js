@@ -23,17 +23,17 @@ const Web = () => {
                         <div style={{transform: `translateX(${(offsetY * 0.09 - 170) >= 0 || (offsetY - 1504) < 0 ? 0 : (offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.0048 - 8}`}}>
                             <h1 className='title'>Html</h1>
                             <span className='underline' /> 
-                            <p>Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman.</p> 
+                            <p>I have taken several online courses for html, css, and javascript and have spent this year learning more about html in my Programming and Software Development class.</p>
                         </div>
                         <div style={{transform: `translateY(${(offsetY * 0.09 - 170) >= 0 || (offsetY - 1504) < 0 ? 0 : (offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.0048 - 8}`}}>
                             <h1 className='title'>Css</h1>
                             <span className='underline' />
-                            <p>Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman.</p>
+                            <p>I have taken several online courses for html, css and javascript. For CSS I have taken some extra steps by learning SVG animations as well as some advanced css techniques for animations. I also spent this year learning CSS in my Programming and Software Development class.</p>
                         </div>
                         <div style={{transform: `translateX(${-(offsetY * 0.09 - 170) <= 0 || (offsetY - 1504) < 0 ? 0 : -(offsetY * 0.09 - 170)}px)`, opacity: `${offsetY * 0.0048 - 8}`}}>
                             <h1 className='title'>Javascript</h1>
                             <span className='underline' />
-                            <p>Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman.</p>
+                            <p>I have taken several online courses for html, css and javascript. For Javascript, I took a Udemy course for react and I also spent time to learn the new Javascript syntax and features inside JS6.</p>
                         </div>  
                     </div>
                 </div> 
@@ -48,18 +48,8 @@ const Web = () => {
                     <div style={{transform: `translateX(${(offsetY * 0.09 - 300) >= 0 || (offsetY -2960) < 0 ? 0 : (offsetY * 0.09 - 300)}px)`, opacity: `${offsetY * 0.0048 - 14.87}`}}> 
                         <h1 className='title'>Html</h1>
                         <span className='underline' /> 
-                        <p>Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman.</p> 
+                        <p>Over the past two years, my interest has started to grow more and more with React.js the more I learn about it. Right now I have completed a full React.js course on Udemy and I know most of the <i>Ins</i> and <i>outs</i> of React.js. I learns JS6 syntax so I could better use React.js so now I am able to make any website I could using regular Html, css, and javascript, but with even more functionality and features with the power of React.js</p>
                     </div>
-                    <div style={{transform: `translateY(${(offsetY * 0.09 - 300) >= 0 || (offsetY -2960) < 0 ? 0 : (offsetY * 0.09 - 300)}px)`, opacity: `${offsetY * 0.0048 - 14.87}`}}>
-                        <h1 className='title'>Css</h1>
-                        <span className='underline' />
-                        <p>Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman.</p>
-                    </div>
-                    <div style={{transform: `translateX(${-(offsetY * 0.09 - 300) <= 0 || offsetY -2960 < 0 ? 0 : -(offsetY * 0.09 - 300)}px)`, opacity: `${offsetY * 0.0048 - 14.87}`}}>
-                        <h1 className='title'>Javascript</h1>
-                        <span className='underline' />
-                        <p>Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman. Christian Auman.</p>
-                    </div>   
                 </div>
             </div>
         </div>
