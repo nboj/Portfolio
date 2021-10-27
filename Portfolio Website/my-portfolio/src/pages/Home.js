@@ -95,16 +95,6 @@ function Home() {
             <Web/>
             <Java setNav={setNavOn}/>
             <div id='cSharp'>
-                <h1 id='title'>C#</h1>
-                <section>
-                    <p>Im struggling to figure out what to put here...</p>
-                    <p>Im struggling to figure out what to put here...</p>
-                    <p>Im struggling to figure out what to put here...</p>
-                    <p>Im struggling to figure out what to put here...</p>
-                    <p>Im struggling to figure out what to put here...</p>
-                    <p>Im struggling to figure out what to put here...</p>
-                    <p>Im struggling to figure out what to put here...</p>
-                </section>
             </div>
         </div>
     );
