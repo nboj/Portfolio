@@ -48,8 +48,8 @@ function Home() {
                         <line className='letters' id='a3' x1="273.66" y1="6.73" x2="368.09" y2="270.8"/>
                     </svg>
                     <li onClick={() => {
-                        scroll.scrollTo($('#Contact').position().top)
-                    }}>Contact Me
+                        scroll.scrollTo($('#info').position().top)
+                    }}>Info
                     </li>
                     <li onClick={() => {
                         scroll.scrollTo($('#java').position().top)
@@ -95,7 +95,7 @@ function Home() {
             <Unity/>
             <Web/>
             <Java setNav={setNavOn}/>
-            <div id='Contact'>
+            <div id='info'>
                 <Footer />
             </div>
         </div>
