@@ -14,8 +14,7 @@ div.java {
     margin: 0;   
 }
 
-#backgroundImg >*{
-    
+#backgroundImg >* {
     overflow: visible;
 }
 
@@ -78,7 +77,7 @@ div.java {
     background-position: center;
     background-size: cover;
     width: 27.042vw;
-    height: 14.021vw; 
+    height: 14.021vw;
     opacity: 0.7;
     border: none;  
 }
@@ -99,9 +98,7 @@ div.java {
     background: url('https://th.bing.com/th/id/R.02cd2a59a5bb6b02e54c6267dfd2af07?rik=iRMhSOjSPdg%2bEA&riu=http%3a%2f%2f3.bp.blogspot.com%2f-Qs0ZbaSy4KM%2fT6AuMiorc6I%2fAAAAAAAABOc%2fRpA3dZGicC8%2fs1600%2fminecraft_dirt.jpg&ehk=JryviKbuYAEGL8bIGd20ElcOVajk0DWd3LDg90fLKGk%3d&risl=&pid=ImgRaw&r=0');
     background-size: 7.8125vw; 
     padding: 10rem 0;
-    height: 100.7vw;
-    border-bottom-left-radius: 0.52vw;    
-    border-bottom-right-radius: 0.52vw;    
+    height: fit-content;
 }
 
 #dirt >* {
@@ -124,8 +121,8 @@ div.java {
     z-index: 1;
     background: url(../images/dirt.png); 
     background-size: 7.8vw;  
-    width: 100%; 
-    height: 7.8vw; 
+    width: 100%;
+    height: 7.8vw;
     clip-path: inset(0 0 1px 0);
     padding: 0;
     margin: 0;
@@ -264,8 +261,8 @@ div.java {
     background-size: 71.875vw;  
     background-color: transparent; 
     width: 71.875vw;
-    margin: auto;
-    top: 10.68vw;   
+    margin: 0 auto 300px auto;
+    top: 10.68vw;
     border-radius: 0;  
 }
 

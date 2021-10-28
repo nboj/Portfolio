@@ -6,6 +6,7 @@ import Unity from '../modules/unity';
 import Web from '../modules/web';
 import Java from '../modules/Java';
 import Typewriter from "../modules/Typewriter";
+import Footer from '../modules/Footer';
 
 let date = new Date();
 let birthday = false;
@@ -47,8 +48,8 @@ function Home() {
                         <line className='letters' id='a3' x1="273.66" y1="6.73" x2="368.09" y2="270.8"/>
                     </svg>
                     <li onClick={() => {
-                        scroll.scrollTo($('#cSharp').position().top)
-                    }}>C#
+                        scroll.scrollTo($('#Contact').position().top)
+                    }}>Contact Me
                     </li>
                     <li onClick={() => {
                         scroll.scrollTo($('#java').position().top)
@@ -94,7 +95,8 @@ function Home() {
             <Unity/>
             <Web/>
             <Java setNav={setNavOn}/>
-            <div id='cSharp'>
+            <div id='Contact'>
+                <Footer />
             </div>
         </div>
     );
