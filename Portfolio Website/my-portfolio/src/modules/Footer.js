@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import photo from '../images/PhotoMyrtleBeach.com-53.jpg';
 import facebookLogo from '../images/104458_facebook_social media_fb_social_icon.png';
@@ -7,6 +7,7 @@ import instagramLogo from '../images/5279112_camera_instagram_social media_insta
 import linkedInLogo from '../images/734393_in_linked_media_online_social_icon.png';
 import twitterLogo from '../images/104461_twitter_icon.png';
 import $ from 'jquery';
+import {intervalToDuration} from "date-fns";
 
 const FooterStyles = styled.div`
   & {
@@ -142,23 +143,71 @@ const FooterStyles = styled.div`
     
     & #portrait {
       width: 300px;
-    } 
+    }
+  }
+
+  & .countdown-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    & h2 {
+      color: #06d6a0;
+    }
+  }
+
+  & .countdown-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 4px solid #06d6a0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: fit-content;
+  }
+
+  & .interval-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  & .countdown-progressbar {
+    width: 100%;
+    height: 15px;
+    background-color: #06d6a0;
+    border-radius: 20px;
+  }
+  
+  & .countdown-progressbar-container {
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
   }
 `;
 
 const Footer = () => {
-    const [outputText, setOutputText] = useState('');
-    let display = false;
-    const addButtonHandler = (e) => {
-        e.preventDefault();
-        if (!display) {
-            display = true;
-            $('#output-text').css({display: "block"});
+    const [countdownDate, setCountdownDate] = useState({});
+    useEffect(() => {
+        const ticker = setInterval(() => {
+            const date = new Date();
+            const graduationDate = new Date(2022, 5, 7);
+            console.log(graduationDate.toDateString());
+            setCountdownDate(intervalToDuration({
+                start: date,
+                end: graduationDate,
+            }));
+        }, 1000);
+        return () => {
+            clearInterval(ticker);
         }
-        const num1 = document.getElementById('input1').value;
-        const num2 = document.getElementById('input2').value;
-        setOutputText((parseInt(num1) + parseInt(num2)));
-    }
+    }, []);
     return (
         <FooterStyles>
             <h1>Contact Me!</h1>
@@ -197,14 +246,42 @@ const Footer = () => {
                         </tr>
                     </table>
                 </div>
-            <form>
-                <label htmlFor='input1'>Add Two Numbers: </label>
-                <input type='numberInput' id='input1' name='input1'/>
-                <p>+</p>
-                <input type='numberInput' id='input2'/>
-                <button id='addButton' onClick={addButtonHandler}>Add</button>
-            </form>
-            <h4 id='output-text' style={{display: 'none;'}}>{outputText}</h4>
+            <div className='countdown-container'>
+                <h2>Countdown to Graduation!</h2>
+                <div className='countdown-content-container'>
+                    <div className='countdown-interval'>
+                        <h3>{countdownDate.days}</h3>
+                        <h2>Days</h2>
+                    </div>
+                    <div className='countdown-interval'>
+                        <h3>:</h3>
+                        <h2>-</h2>
+                    </div>
+                    <div className='countdown-interval'>
+                        <h3>{countdownDate.hours}</h3>
+                        <h2>Hours</h2>
+                    </div>
+                    <div className='countdown-interval'>
+                        <h3>:</h3>
+                        <h2>-</h2>
+                    </div>
+                    <div className='countdown-interval'>
+                        <h3>{countdownDate.minutes}</h3>
+                        <h2>Minutes</h2>
+                    </div>
+                    <div className='countdown-interval'>
+                        <h3>:</h3>
+                        <h2>-</h2>
+                    </div>
+                    <div className='countdown-interval'>
+                        <h3>{countdownDate.seconds}</h3>
+                        <h2>Seconds</h2>
+                    </div>
+                </div>
+                <div className='countdown-progressbar-container'>
+                    <div className='countdown-progressbar' style={{width: `${((100 - countdownDate.days) / 100) * 100}%`}} />
+                </div>
+            </div>
             <h5 style={{clear: 'both'}}>Christian Auman &copy; 2021</h5>
         </FooterStyles>
     )
