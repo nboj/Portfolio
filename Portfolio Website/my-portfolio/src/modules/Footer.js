@@ -277,10 +277,7 @@ const Footer = () => {
                         <h3>{countdownDate.seconds}</h3>
                         <h2>Seconds</h2>
                     </div>
-                </div>
-                <div className='countdown-progressbar-container'>
-                    <div className='countdown-progressbar' style={{width: `${((100 - countdownDate.days) / 100) * 100}%`}} />
-                </div>
+                </div> 
             </div>
             <h5 style={{clear: 'both'}}>Christian Auman &copy; 2021</h5>
         </FooterStyles>
