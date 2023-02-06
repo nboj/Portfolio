@@ -246,39 +246,6 @@ const Footer = () => {
                         </tr>
                     </table>
                 </div>
-            <div className='countdown-container'>
-                <h2>Countdown to Graduation!</h2>
-                <div className='countdown-content-container'>
-                    <div className='countdown-interval'>
-                        <h3>{countdownDate.days}</h3>
-                        <h2>Days</h2>
-                    </div>
-                    <div className='countdown-interval'>
-                        <h3>:</h3>
-                        <h2>-</h2>
-                    </div>
-                    <div className='countdown-interval'>
-                        <h3>{countdownDate.hours}</h3>
-                        <h2>Hours</h2>
-                    </div>
-                    <div className='countdown-interval'>
-                        <h3>:</h3>
-                        <h2>-</h2>
-                    </div>
-                    <div className='countdown-interval'>
-                        <h3>{countdownDate.minutes}</h3>
-                        <h2>Minutes</h2>
-                    </div>
-                    <div className='countdown-interval'>
-                        <h3>:</h3>
-                        <h2>-</h2>
-                    </div>
-                    <div className='countdown-interval'>
-                        <h3>{countdownDate.seconds}</h3>
-                        <h2>Seconds</h2>
-                    </div>
-                </div> 
-            </div>
             <h5 style={{clear: 'both'}}>Christian Auman &copy; 2021</h5>
         </FooterStyles>
     )
