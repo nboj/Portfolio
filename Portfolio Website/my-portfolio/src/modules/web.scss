@@ -13,7 +13,7 @@ div#web {
   margin: 0;
   color: white;
   clip-path: $slanted-path;
-  padding: 10.416666666666666vw 0 700px;
+  padding: 10.416666666666666vw 0 30vw;
 }
 
 #web #title {
@@ -122,6 +122,12 @@ div#web {
   bottom: -20px;
 }
 
+#iconContainer > .parallax-outer {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  transform: translateY(-30vw);
+}
 
 #react #title {
   $title: 'React';
@@ -129,7 +135,7 @@ div#web {
   margin: 0 auto;
   width: fit-content;
   color: transparent;
-  font-size: 8vw;
+  font-size: 120px;
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   text-align: center;
@@ -164,6 +170,19 @@ div#web {
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
+@media only screen and (max-width: 700px) {
+  #react .flex2 {
+    width: 80vw;
+    margin: 5px;
+
+  }
+  #flex2-top-container {
+    width: fit-content;
+    margin: auto;
+    padding: 0;
+  }
+}
+
 #react #flex2-container {
   border-left: 3px solid #06d6a0;
   border-right: 3px solid #06d6a0;
@@ -172,7 +191,19 @@ div#web {
   padding: 10px 0;
 }
 
+
 #react #flex2-top-container {
   display: block;
-  padding: 300px 0;
+  position: relative;
+  padding: 100px 0;
+}
+
+@media only screen and (max-width: 700px) {
+  #react {
+    padding: 100px 0 100px 0;
+  }
+
+  #react #title {
+    font-size: 80px;
+  }
 }

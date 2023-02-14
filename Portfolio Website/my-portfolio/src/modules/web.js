@@ -4,6 +4,7 @@ import './web.scss';
 import {useEffect} from 'react';
 import {Parallax} from "react-scroll-parallax";
 import wavesImg from '../images/BlueSplash2.png'
+import styles from './Java.module.css';
 
 const Web = () => {
 
@@ -55,19 +56,18 @@ const Web = () => {
                     </div>
                 </div>
             </div>
-            <div id='iconContainer'>
-                <Parallax
-                    tagOuter='div'
-                    x={[100, -100]}
-                    styleOuter={{position: 'relative', top: '-600px'}}
-                >
-                    <img alt=''
-                         src='https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png'
-                         className='reactLogo' style={{transform: `rotate(${-offsetY * 0.2}deg)`}}/>
-                </Parallax>
-            </div>
             <div id='transitionImg-container'>
                 <img src={wavesImg} id='transitionImg' style={{backgroundPositionX: `${offsetY * 0.2}px`}} alt=''/>
+            </div>
+            <div id='iconContainer'>
+              <Parallax
+                tagOuter='div'
+                x={[100, -100]}
+                >
+                <img alt=''
+                  src='https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png'
+                  className='reactLogo' style={{transform: `rotate(${-offsetY * 0.2}deg)`}}/>
+              </Parallax>
             </div>
             <div id='react'>
                 <Parallax
@@ -88,17 +88,10 @@ const Web = () => {
                                 make any website I could using regular Html, css, and javascript, but with even more
                                 functionality and features with the power of React.js</p>
                         </div>
-                        <div className='flex2'>
-                            <h1 className='title'>About</h1>
-                            <p>Over the past two years, my interest has started to grow more and more with React.js the
-                                more I learn about it. Right now I have completed a full React.js course on Udemy which
-                                has 48 hours of content and I know most of the <i>'ins'</i> and <i>'outs'</i> of
-                                React.js. I also learned JS6 syntax so I could better use React.js. Now I am able to
-                                make any website I could using regular Html, css, and javascript, but with even more
-                                functionality and features with the power of React.js</p>
-                        </div>
+
                     </div>
                 </div>
+              <img alt='' id={styles.clouds} style={{position: 'absolute'}}/>
             </div>
         </div>
     );

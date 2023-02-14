@@ -59,6 +59,13 @@ const FooterStyles = styled.div`
     }
   }
 
+  @media only screen and (max-width: 700px) {
+    h1 {
+      font-size: 40px;
+      margin: 50px auto;
+    }
+  }
+
   & td {
     padding: 0 0 100px 0;
   }
@@ -193,21 +200,6 @@ const FooterStyles = styled.div`
 `;
 
 const Footer = () => {
-    const [countdownDate, setCountdownDate] = useState({});
-    useEffect(() => {
-        const ticker = setInterval(() => {
-            const date = new Date();
-            const graduationDate = new Date(2022, 5, 7);
-            console.log(graduationDate.toDateString());
-            setCountdownDate(intervalToDuration({
-                start: date,
-                end: graduationDate,
-            }));
-        }, 1000);
-        return () => {
-            clearInterval(ticker);
-        }
-    }, []);
     return (
         <FooterStyles>
             <h1>Contact Me!</h1>
@@ -246,7 +238,7 @@ const Footer = () => {
                         </tr>
                     </table>
                 </div>
-            <h5 style={{clear: 'both'}}>Christian Auman &copy; 2021</h5>
+          <h5 style={{clear: 'both'}}>Christian Auman &copy; {new Date().getFullYear()}</h5>
         </FooterStyles>
     )
 }

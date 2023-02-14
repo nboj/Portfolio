@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styles from './Java.module.css';
 import Popup from './Popup';
 import $ from 'jquery';
+import bg from '../images/MinecraftBackground.jpg'
 import popupStyles from './Popup.module.css';
 import {Parallax, useController} from 'react-scroll-parallax';
 
@@ -32,7 +33,7 @@ const Java = (props) => {
     const scrollHandler = () => {
         setOffsetY(window.scrollY);
         if (window.innerWidth < 400) {
-            setMult(10);
+            setMult(20);
         } else if (window.innerWidth < 840) {
             setMult(20);
         } else {
@@ -97,7 +98,6 @@ const Java = (props) => {
                 y={[-350, -300]}
                 styleInner={{position: 'absolute', zIndex: '2', width: '100px', height: '100px'}}
             >
-                <img alt='' id={styles.clouds} style={{position: 'absolute'}}/>
                 {/*style={{transform: `translateY(${((offsetY) * -0.09) * 100 / window.innerWidth}vw)`}}*/}
             </Parallax>
             {/* <div id={styles.javaTitleContainer}> */}
@@ -116,7 +116,7 @@ const Java = (props) => {
                 </div>
                 {/* </div> */}
             </Parallax>
-            <img alt='' src='src\images\MinecraftBackground.jpg' width='100%' height='auto' id={styles.backgroundImg}/>
+            <img alt='' src={bg} width='100%' height='auto' id={styles.backgroundImg}/>
             {/* <img alt''> src='https://www.spacemacs.org/layers/+lang/java/img/java.png' className={styles.javaImg + " " + styles.one} style={{transform: `translateY(${((offsetY - offset7) * 0.1) * 100 / window.innerWidth}vw)`}} /> */}
             <Parallax
                 tagOuter='div'
@@ -144,22 +144,22 @@ const Java = (props) => {
                     <span id={styles.steveHead} style={{transform: `rotate(${Math.sin(offsetY * 0.01) * 5}deg)`}}/>
                     <div id={styles.armContainer}>
                         <div id={styles.steveArm1}
-                             style={{transform: `rotate(${Math.sin(offsetY * 0.01) * mult}deg) translateX(${(-Math.sin(offsetY * 0.01) * mult) * 100 / window.innerWidth}vw)`}}>
+                             style={{transform: `rotate(${Math.sin(offsetY * 0.01) * mult}deg) translateX(${(-Math.sin(offsetY * 0.01) * mult) * 100 / window.innerWidth}vw)`, transformOrigin: 'center 50px'}}>
                             <span id={styles.stevePickaxe}/>
                         </div>
                     </div>
                     <span id={styles.steveTorso}/>
                     <div id={styles.armContainer}>
                         <span id={styles.steveArm2}
-                              style={{transform: `rotate(${-Math.sin(offsetY * 0.01) * mult}deg) translateX(${(Math.sin(offsetY * 0.01) * mult) * 100 / window.innerWidth}vw)`}}/>
+                          style={{transform: `rotate(${-Math.sin(offsetY * 0.01) * mult}deg) translateX(${(Math.sin(offsetY * 0.01) * mult) * 100 / window.innerWidth}vw)`, transformOrigin: 'center 50px'}}/>
                     </div>
                     <div id={styles.armContainer}>
                         <span id={styles.steveLeg1}
-                              style={{transform: `rotate(${Math.sin(offsetY * 0.01) * mult}deg) translateX(${(-Math.sin(offsetY * 0.01) * mult) * 100 / window.innerWidth}vw)`}}/>
+                          style={{transform: `rotate(${Math.sin(offsetY * 0.01) * mult}deg) translateX(${(-Math.sin(offsetY * 0.01) * mult) * 100 / window.innerWidth}vw)`, transformOrigin: 'center 50px'}}/>
                     </div>
                     <div id={styles.armContainer}>
                         <span id={styles.steveLeg2}
-                              style={{transform: `rotate(${-Math.sin(offsetY * 0.01) * mult}deg) translateX(${(Math.sin(offsetY * 0.01) * mult) * 100 / window.innerWidth}vw)`}}/>
+                          style={{transform: `rotate(${-Math.sin(offsetY * 0.01) * mult}deg) translateX(${(Math.sin(offsetY * 0.01) * mult) * 100 / window.innerWidth}vw)`, transformOrigin: 'center 50px', zIndex: '100'}}/>
                     </div>
                 </div>
             </Parallax>
