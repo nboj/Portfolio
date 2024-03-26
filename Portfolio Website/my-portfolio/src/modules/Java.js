@@ -104,7 +104,7 @@ const Java = (props) => {
             <Parallax
                 tagOuter='div'
                 y={['0', '50']}
-                styleInner={{zIndex: '1', position: 'absolute'}}
+                styleInner={{zIndex: '1', position: 'absolute', left: '50%'}}
             >
                 <div id={styles.titleContainer}>
                     {/* transform: `translateX(${(offsetY - offset) * 0.1 > 0 || (offsetY - offset3) < 0 ? 0 : (offsetY - offset) * 0.1}px)`, 
