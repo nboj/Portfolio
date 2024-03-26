@@ -73,14 +73,42 @@ body {
 }    
 
 ::-webkit-scrollbar {  
-  width: 8px;    
+  width: 16px;
+  background: #515050;
 }  
 
 ::-webkit-scrollbar-thumb { 
-  background: #0d47a1; 
+  background: #cfcfcf; 
   border-radius: 20px;  
+  border: 3px solid transparent;
+  background-clip: content-box;
  }  
+/* Buttons */
+::-webkit-scrollbar-button:single-button {
+  background-color: #bbbbbb;
+  display: block;
+  border-style: solid;
+  height: 13px;
+  width: 16px;
+}
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #555555 transparent;
+}
 
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 8px 8px 0 8px;
+  border-color: #555555 transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: #777777 transparent transparent transparent;
+}
 #title {
   text-align: center;
   font-size: 50px;
