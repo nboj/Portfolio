@@ -5,6 +5,10 @@ import $ from 'jquery';
 import bg from '../images/MinecraftBackground.jpg'
 import popupStyles from './Popup.module.css';
 import {Parallax, useController} from 'react-scroll-parallax';
+import award from '../images/meWithAward.png';
+import plaque1 from '../images/plaque1.png';
+import trophy from '../images/Trophy.png';
+import plaqueEdited from '../images/plaque1Edited.png';
 
 let height = 50;
 let hidden = true;
@@ -166,11 +170,11 @@ const Java = (props) => {
             <span id={styles.grass}></span>
             <div id={styles.dirt}>
                 <div id={styles.caveImg1}>
-                    <img alt='' id={styles.plaque1} onClick={() => {
+                    <img alt='' src={plaqueEdited} id={styles.plaque1} onClick={() => {
                         handleClick();
                         setPlaque1On(true);
                     }}/>
-                    <img alt='' id={styles.trophyImg} onClick={() => {
+                    <img alt='' src={trophy} id={styles.trophyImg} onClick={() => {
                         handleClick();
                         setTrophyOn(true);
                     }}/>
@@ -185,7 +189,7 @@ const Java = (props) => {
                                     trophy.
                                 </p>
                             </div>
-                            <div className={styles.popupImg + ' popupImg'} id={styles.plaque1PopupImg}/>
+                            <img alt={''} src={plaque1} className={styles.popupImg}/>
                         </div>
                     } display={plaque1On ? 'block' : 'none'} handleClose={handlePlaque1Close}/>
                     <Popup className={styles.popup} content={
@@ -204,7 +208,7 @@ const Java = (props) => {
                                     experience to remember and I learned a lot from doing it.
                                 </p>
                             </div>
-                            <div className={styles.popupImg} id={styles.trophyPopupImg}/>
+                            <img alt={''} src={award} className={styles.popupImg}/>
                         </div>
                     } display={trophyOn ? 'block' : 'none'} handleClose={handleTrophyClose}/>
                 </div>
